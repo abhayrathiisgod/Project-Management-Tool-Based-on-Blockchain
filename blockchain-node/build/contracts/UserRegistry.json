@@ -1,0 +1,833 @@
+{
+  "contractName": "UserRegistry",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "userProfiles",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "companyName",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_email",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_companyName",
+          "type": "string"
+        }
+      ],
+      "name": "addUserProfile",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getUserProfile",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "email",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "companyName",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct UserRegistry.UserProfile",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.25+commit.b61c2a91\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"_email\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_companyName\",\"type\":\"string\"}],\"name\":\"addUserProfile\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"getUserProfile\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"companyName\",\"type\":\"string\"}],\"internalType\":\"struct UserRegistry.UserProfile\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"userProfiles\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"companyName\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/UserProfile.sol\":\"UserRegistry\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[],\"viaIR\":true},\"sources\":{\"project:/contracts/UserProfile.sol\":{\"keccak256\":\"0xf0dba243ca83e5170794c794d43fed3d2a5b3869d3fbe71e6f8aa978a2a46f38\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2d8edffda8d7b284eba712c5699f297052ed50b8b895fae9916bb9da86adbe07\",\"dweb:/ipfs/QmPPhetwe5Tkca4kdha85gFNBs7Xrhggv3vdhhq2q2DvQW\"]}},\"version\":1}",
+  "bytecode": "0x608080604052346015576106a2908161001a8239f35b5f80fdfe60406080815260049081361015610014575f80fd5b5f3560e01c806318d4a12d1461040d5780631f52b76c14610321576377d2168f1461003d575f80fd5b3461031d57606036600319011261031d5767ffffffffffffffff60243581811161031d5761006e9036908501610616565b60443582811161031d576100859036908601610616565b93835193610092856104fe565b8135855260209081860193845285019586525f54946801000000000000000086101561030a576100c86001968781015f5561047b565b9190916102f85751815585810193519384518681116102e5576100eb82546104c6565b95601f968781116102a2575b50849087831160011461023e576002949392915f9183610233575b50505f19600383901b1c191690891b1790555b019551918251948511610220575061013d86546104c6565b8381116101dd575b508092841160011461017e57509282939183925f94610173575b50501b915f199060031b1c19161790555f80f35b015192505f8061015f565b919083601f198116875f52845f20945f905b888383106101c357505050106101ab575b505050811b019055005b01515f1960f88460031b161c191690555f80806101a1565b858701518855909601959485019487935090810190610190565b865f52815f208480870160051c820192848810610217575b0160051c019086905b82811061020c575050610145565b5f81550186906101fe565b925081926101f5565b604190634e487b7160e01b5f525260245ffd5b015190505f80610112565b9392918991601f19821690845f52875f20915f5b8982821061028c575050968360029810610274575b505050811b019055610125565b01515f1960f88460031b161c191690555f8080610267565b838a015185558e96909401939283019201610252565b835f52855f208880850160051c8201928886106102dc575b0160051c01908a905b8281106102d15750506100f7565b5f8155018a906102c3565b925081926102ba565b604185634e487b7160e01b5f525260245ffd5b5f84634e487b7160e01b82525260245ffd5b604183634e487b7160e01b5f525260245ffd5b5f80fd5b503461031d576020918260031936011261031d578035906060838051610346816104fe565b5f8152828782015201525f548210156103d457506103666103d09161047b565b506103bd835193610376856104fe565b82548552606061039a600261038d60018701610550565b9589890196875201610550565b9382870194855282519788978189525190880152519186015260808501906105f2565b9051838203601f190160608501526105f2565b0390f35b825162461bcd60e51b81529081018490526013602482015272496e646578206f7574206f6620626f756e647360681b6044820152606490fd5b50903461031d57602036600319011261031d57355f5481101561031d576104339061047b565b50906103d0825491610453600261044c60018701610550565b9501610550565b61046e825195869586526060602087015260608601906105f2565b91848303908501526105f2565b5f548110156104b2576003905f8052027f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56301905f90565b634e487b7160e01b5f52603260045260245ffd5b90600182811c921680156104f4575b60208310146104e057565b634e487b7160e01b5f52602260045260245ffd5b91607f16916104d5565b6060810190811067ffffffffffffffff82111761051a57604052565b634e487b7160e01b5f52604160045260245ffd5b90601f8019910116810190811067ffffffffffffffff82111761051a57604052565b9060405191825f8254610562816104c6565b908184526020946001916001811690815f146105d05750600114610592575b5050506105909250038361052e565b565b5f90815285812095935091905b8183106105b857505061059093508201015f8080610581565b8554888401850152948501948794509183019161059f565b9250505061059094925060ff191682840152151560051b8201015f8080610581565b805180835260209291819084018484015e5f828201840152601f01601f1916010190565b81601f8201121561031d5780359067ffffffffffffffff821161051a576040519261064b601f8401601f19166020018561052e565b8284526020838301011161031d57815f92602080930183860137830101529056fea26469706673582212209ba46dbf07d2cb82699553aba83ddd41a263ebc65cb9186b4cf0e70996eed98664736f6c63430008190033",
+  "deployedBytecode": "0x60406080815260049081361015610014575f80fd5b5f3560e01c806318d4a12d1461040d5780631f52b76c14610321576377d2168f1461003d575f80fd5b3461031d57606036600319011261031d5767ffffffffffffffff60243581811161031d5761006e9036908501610616565b60443582811161031d576100859036908601610616565b93835193610092856104fe565b8135855260209081860193845285019586525f54946801000000000000000086101561030a576100c86001968781015f5561047b565b9190916102f85751815585810193519384518681116102e5576100eb82546104c6565b95601f968781116102a2575b50849087831160011461023e576002949392915f9183610233575b50505f19600383901b1c191690891b1790555b019551918251948511610220575061013d86546104c6565b8381116101dd575b508092841160011461017e57509282939183925f94610173575b50501b915f199060031b1c19161790555f80f35b015192505f8061015f565b919083601f198116875f52845f20945f905b888383106101c357505050106101ab575b505050811b019055005b01515f1960f88460031b161c191690555f80806101a1565b858701518855909601959485019487935090810190610190565b865f52815f208480870160051c820192848810610217575b0160051c019086905b82811061020c575050610145565b5f81550186906101fe565b925081926101f5565b604190634e487b7160e01b5f525260245ffd5b015190505f80610112565b9392918991601f19821690845f52875f20915f5b8982821061028c575050968360029810610274575b505050811b019055610125565b01515f1960f88460031b161c191690555f8080610267565b838a015185558e96909401939283019201610252565b835f52855f208880850160051c8201928886106102dc575b0160051c01908a905b8281106102d15750506100f7565b5f8155018a906102c3565b925081926102ba565b604185634e487b7160e01b5f525260245ffd5b5f84634e487b7160e01b82525260245ffd5b604183634e487b7160e01b5f525260245ffd5b5f80fd5b503461031d576020918260031936011261031d578035906060838051610346816104fe565b5f8152828782015201525f548210156103d457506103666103d09161047b565b506103bd835193610376856104fe565b82548552606061039a600261038d60018701610550565b9589890196875201610550565b9382870194855282519788978189525190880152519186015260808501906105f2565b9051838203601f190160608501526105f2565b0390f35b825162461bcd60e51b81529081018490526013602482015272496e646578206f7574206f6620626f756e647360681b6044820152606490fd5b50903461031d57602036600319011261031d57355f5481101561031d576104339061047b565b50906103d0825491610453600261044c60018701610550565b9501610550565b61046e825195869586526060602087015260608601906105f2565b91848303908501526105f2565b5f548110156104b2576003905f8052027f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56301905f90565b634e487b7160e01b5f52603260045260245ffd5b90600182811c921680156104f4575b60208310146104e057565b634e487b7160e01b5f52602260045260245ffd5b91607f16916104d5565b6060810190811067ffffffffffffffff82111761051a57604052565b634e487b7160e01b5f52604160045260245ffd5b90601f8019910116810190811067ffffffffffffffff82111761051a57604052565b9060405191825f8254610562816104c6565b908184526020946001916001811690815f146105d05750600114610592575b5050506105909250038361052e565b565b5f90815285812095935091905b8183106105b857505061059093508201015f8080610581565b8554888401850152948501948794509183019161059f565b9250505061059094925060ff191682840152151560051b8201015f8080610581565b805180835260209291819084018484015e5f828201840152601f01601f1916010190565b81601f8201121561031d5780359067ffffffffffffffff821161051a576040519261064b601f8401601f19166020018561052e565b8284526020838301011161031d57815f92602080930183860137830101529056fea26469706673582212209ba46dbf07d2cb82699553aba83ddd41a263ebc65cb9186b4cf0e70996eed98664736f6c63430008190033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "57:644:3:-:0;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "57:644:3:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;57:644:3;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;:::i;:::-;;;;;;379:110;;;;57:644;;;379:110;;57:644;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;57:644:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:644:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;57:644:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:644:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:644:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;602:28;;57:644;;;671:20;;57:644;671:20;;:::i;:::-;57:644;;;;;;;;:::i;:::-;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;-1:-1:-1;;57:644:3;;;;;;:::i;:::-;;;;;;;-1:-1:-1;;;57:644:3;;;;;;;;;;;;;-1:-1:-1;;;57:644:3;;;;;;;;;;;;;;;-1:-1:-1;;57:644:3;;;;;;;187:33;;;;;;;;:::i;:::-;57:644;;;;;187:33;;;;57:644;187:33;;;:::i;:::-;;;;:::i;:::-;57:644;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;-1:-1:-1;57:644:3;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;:::o;:::-;-1:-1:-1;57:644:3;;;;;;;;-1:-1:-1;;57:644:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:644:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:644:3;;;;;;;;-1:-1:-1;;57:644:3;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;57:644:3;;;;;:::i;:::-;;;;;;;;;;;;;-1:-1:-1;57:644:3;;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract UserRegistry {\n    struct UserProfile {\n        uint256 id;\n        string email;\n        string companyName;\n    }\n\n    UserProfile[] public userProfiles;\n\n    function addUserProfile(\n        uint256 _id,\n        string memory _email,\n        string memory _companyName\n    ) public {\n        userProfiles.push(UserProfile({\n            id: _id,\n            email: _email,\n            companyName: _companyName\n        }));\n    }\n\n    function getUserProfile(uint256 _index) public view returns (UserProfile memory) {\n        require(_index < userProfiles.length, \"Index out of bounds\");\n        return userProfiles[_index];\n    }\n\n}\n",
+  "sourcePath": "/Users/abhayrathi/Desktop/Developer/capstone_proj/blockchain-node/contracts/UserProfile.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/UserProfile.sol",
+    "exportedSymbols": {
+      "UserRegistry": [
+        309
+      ]
+    },
+    "id": 310,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 256,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "UserRegistry",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 309,
+        "linearizedBaseContracts": [
+          309
+        ],
+        "name": "UserRegistry",
+        "nameLocation": "66:12:3",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "UserRegistry.UserProfile",
+            "id": 263,
+            "members": [
+              {
+                "constant": false,
+                "id": 258,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "122:2:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 263,
+                "src": "114:10:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 257,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "114:7:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 260,
+                "mutability": "mutable",
+                "name": "email",
+                "nameLocation": "141:5:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 263,
+                "src": "134:12:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 259,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "134:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 262,
+                "mutability": "mutable",
+                "name": "companyName",
+                "nameLocation": "163:11:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 263,
+                "src": "156:18:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 261,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "156:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "UserProfile",
+            "nameLocation": "92:11:3",
+            "nodeType": "StructDefinition",
+            "scope": 309,
+            "src": "85:96:3",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "18d4a12d",
+            "id": 267,
+            "mutability": "mutable",
+            "name": "userProfiles",
+            "nameLocation": "208:12:3",
+            "nodeType": "VariableDeclaration",
+            "scope": 309,
+            "src": "187:33:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_UserProfile_$263_storage_$dyn_storage",
+              "typeString": "struct UserRegistry.UserProfile[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 265,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 264,
+                  "name": "UserProfile",
+                  "nameLocations": [
+                    "187:11:3"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 263,
+                  "src": "187:11:3"
+                },
+                "referencedDeclaration": 263,
+                "src": "187:11:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_UserProfile_$263_storage_ptr",
+                  "typeString": "struct UserRegistry.UserProfile"
+                }
+              },
+              "id": 266,
+              "nodeType": "ArrayTypeName",
+              "src": "187:13:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_UserProfile_$263_storage_$dyn_storage_ptr",
+                "typeString": "struct UserRegistry.UserProfile[]"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 286,
+              "nodeType": "Block",
+              "src": "351:146:3",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 280,
+                            "name": "_id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 269,
+                            "src": "409:3:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "id": 281,
+                            "name": "_email",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 271,
+                            "src": "433:6:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          {
+                            "id": 282,
+                            "name": "_companyName",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 273,
+                            "src": "466:12:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          ],
+                          "id": 279,
+                          "name": "UserProfile",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 263,
+                          "src": "379:11:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_UserProfile_$263_storage_ptr_$",
+                            "typeString": "type(struct UserRegistry.UserProfile storage pointer)"
+                          }
+                        },
+                        "id": 283,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "nameLocations": [
+                          "405:2:3",
+                          "426:5:3",
+                          "453:11:3"
+                        ],
+                        "names": [
+                          "id",
+                          "email",
+                          "companyName"
+                        ],
+                        "nodeType": "FunctionCall",
+                        "src": "379:110:3",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_UserProfile_$263_memory_ptr",
+                          "typeString": "struct UserRegistry.UserProfile memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_UserProfile_$263_memory_ptr",
+                          "typeString": "struct UserRegistry.UserProfile memory"
+                        }
+                      ],
+                      "expression": {
+                        "id": 276,
+                        "name": "userProfiles",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 267,
+                        "src": "361:12:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_UserProfile_$263_storage_$dyn_storage",
+                          "typeString": "struct UserRegistry.UserProfile storage ref[] storage ref"
+                        }
+                      },
+                      "id": 278,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "374:4:3",
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "361:17:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_UserProfile_$263_storage_$dyn_storage_ptr_$_t_struct$_UserProfile_$263_storage_$returns$__$attached_to$_t_array$_t_struct$_UserProfile_$263_storage_$dyn_storage_ptr_$",
+                        "typeString": "function (struct UserRegistry.UserProfile storage ref[] storage pointer,struct UserRegistry.UserProfile storage ref)"
+                      }
+                    },
+                    "id": 284,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "361:129:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 285,
+                  "nodeType": "ExpressionStatement",
+                  "src": "361:129:3"
+                }
+              ]
+            },
+            "functionSelector": "77d2168f",
+            "id": 287,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addUserProfile",
+            "nameLocation": "236:14:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 274,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 269,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nameLocation": "268:3:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 287,
+                  "src": "260:11:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 268,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "260:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 271,
+                  "mutability": "mutable",
+                  "name": "_email",
+                  "nameLocation": "295:6:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 287,
+                  "src": "281:20:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 270,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "281:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 273,
+                  "mutability": "mutable",
+                  "name": "_companyName",
+                  "nameLocation": "325:12:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 287,
+                  "src": "311:26:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 272,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "311:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "250:93:3"
+            },
+            "returnParameters": {
+              "id": 275,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "351:0:3"
+            },
+            "scope": 309,
+            "src": "227:270:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 307,
+              "nodeType": "Block",
+              "src": "584:114:3",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 299,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "id": 296,
+                          "name": "_index",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 289,
+                          "src": "602:6:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "<",
+                        "rightExpression": {
+                          "expression": {
+                            "id": 297,
+                            "name": "userProfiles",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 267,
+                            "src": "611:12:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_struct$_UserProfile_$263_storage_$dyn_storage",
+                              "typeString": "struct UserRegistry.UserProfile storage ref[] storage ref"
+                            }
+                          },
+                          "id": 298,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "624:6:3",
+                          "memberName": "length",
+                          "nodeType": "MemberAccess",
+                          "src": "611:19:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "602:28:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "496e646578206f7574206f6620626f756e6473",
+                        "id": 300,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "632:21:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_dd00b67a545791a54dd99d9c09eb42099756ea4ee2bd47188784c22234589367",
+                          "typeString": "literal_string \"Index out of bounds\""
+                        },
+                        "value": "Index out of bounds"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_dd00b67a545791a54dd99d9c09eb42099756ea4ee2bd47188784c22234589367",
+                          "typeString": "literal_string \"Index out of bounds\""
+                        }
+                      ],
+                      "id": 295,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
+                      "referencedDeclaration": 4294967278,
+                      "src": "594:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 301,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "594:60:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 302,
+                  "nodeType": "ExpressionStatement",
+                  "src": "594:60:3"
+                },
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "id": 303,
+                      "name": "userProfiles",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 267,
+                      "src": "671:12:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_UserProfile_$263_storage_$dyn_storage",
+                        "typeString": "struct UserRegistry.UserProfile storage ref[] storage ref"
+                      }
+                    },
+                    "id": 305,
+                    "indexExpression": {
+                      "id": 304,
+                      "name": "_index",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 289,
+                      "src": "684:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "671:20:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_UserProfile_$263_storage",
+                      "typeString": "struct UserRegistry.UserProfile storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 294,
+                  "id": 306,
+                  "nodeType": "Return",
+                  "src": "664:27:3"
+                }
+              ]
+            },
+            "functionSelector": "1f52b76c",
+            "id": 308,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUserProfile",
+            "nameLocation": "512:14:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 290,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 289,
+                  "mutability": "mutable",
+                  "name": "_index",
+                  "nameLocation": "535:6:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 308,
+                  "src": "527:14:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 288,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "527:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "526:16:3"
+            },
+            "returnParameters": {
+              "id": 294,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 293,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 308,
+                  "src": "564:18:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_UserProfile_$263_memory_ptr",
+                    "typeString": "struct UserRegistry.UserProfile"
+                  },
+                  "typeName": {
+                    "id": 292,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 291,
+                      "name": "UserProfile",
+                      "nameLocations": [
+                        "564:11:3"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 263,
+                      "src": "564:11:3"
+                    },
+                    "referencedDeclaration": 263,
+                    "src": "564:11:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_UserProfile_$263_storage_ptr",
+                      "typeString": "struct UserRegistry.UserProfile"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "563:20:3"
+            },
+            "scope": 309,
+            "src": "503:195:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 310,
+        "src": "57:644:3",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "32:670:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.25+commit.b61c2a91.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-05-06T07:02:29.506Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

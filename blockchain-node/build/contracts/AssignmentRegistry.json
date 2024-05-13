@@ -1,0 +1,1218 @@
+{
+  "contractName": "AssignmentRegistry",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "assignments",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "task_name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "status",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "due",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "project",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_task_name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_status",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_due",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_project",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_assign",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "addAssignment",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getAssignment",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "task_name",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "status",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "due",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "project",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "assign",
+              "type": "uint256[]"
+            }
+          ],
+          "internalType": "struct AssignmentRegistry.Assignment",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "getAssignmentsCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.25+commit.b61c2a91\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"_task_name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"_status\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_due\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_project\",\"type\":\"uint256\"},{\"internalType\":\"uint256[]\",\"name\":\"_assign\",\"type\":\"uint256[]\"}],\"name\":\"addAssignment\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"assignments\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"task_name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"status\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"due\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"project\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"getAssignment\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"task_name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"status\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"due\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"project\",\"type\":\"uint256\"},{\"internalType\":\"uint256[]\",\"name\":\"assign\",\"type\":\"uint256[]\"}],\"internalType\":\"struct AssignmentRegistry.Assignment\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAssignmentsCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/TaskList.sol\":\"AssignmentRegistry\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[],\"viaIR\":true},\"sources\":{\"project:/contracts/TaskList.sol\":{\"keccak256\":\"0x610d7e81f4ce1b79320e7538fc0672e9df42b4a487a9efb989eb4771f1a5fd9e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9980008c0f85f611cb2fa1e0ef432c53fa127c52bbc8902b56dee70ab25998ee\",\"dweb:/ipfs/QmSp6eDf1KQf9yNWbm2AM91zBzUjsPyJuB4kaMu6xjGfqh\"]}},\"version\":1}",
+  "bytecode": "0x60808060405234601557610765908161001a8239f35b5f80fdfe6040608081526004361015610012575f80fd5b5f3560e01c80634e50c75c1461051b5780635e3879051461038857806379d6f0a2146100665763d931496014610046575f80fd5b34610062575f366003190112610062576020905f549051908152f35b5f80fd5b50346100625760c03660031901126100625760243567ffffffffffffffff8111610062573660238201121561006257806004013567ffffffffffffffff811161029757601f19908351926100c2602084601f8501160185610631565b818452366024838301011161006257815f92602460209301838701378401015260a4359067ffffffffffffffff821161006257366023830112156100625781600401359167ffffffffffffffff8311610297578260051b8551936101296020830186610631565b8452602460208501918301019136831161006257602401905b8282106103785750505083519361015885610615565b60043585526020850193845284016044358152606085019160643583526080860193608435855260a08701525f54600160401b811015610297578060016101a192015f55610592565b9590956103655786518655519081519167ffffffffffffffff8311610297576101cd60018801546105dd565b601f8111610327575b50602091601f84116001146102b657509180600596949260a09896945f926102ab575b50508160011b915f199060031b1c19161760018501555b5160028401555160038301555160048201550191015180519067ffffffffffffffff821161029757600160401b821161029757602090835483855580841061027c575b5001915f5260205f20915f5b82811061026857005b60019060208351930192818601550161025f565b61029190855f5284845f209182019101610719565b5f610253565b634e487b7160e01b5f52604160045260245ffd5b015190505f806101f9565b839291921691600188015f5260205f20925f5b81811061030f575092600192859260a09a989660059a9896106102f7575b505050811b016001850155610210565b01515f1960f88460031b161c191690555f80806102e7565b929360206001819287860151815501950193016102c9565b61035590600189015f5260205f20601f860160051c8101916020871061035b575b601f0160051c0190610719565b5f6101d6565b9091508190610348565b634e487b7160e01b5f525f60045260245ffd5b8135815260209182019101610142565b5034610062576020908160031936011261006257600435606060a083516103ae81610615565b5f815282868201525f858201525f838201525f608082015201525f548110156104e1576103db8391610592565b508251916103e883610615565b815483526001916103fb60018201610653565b90828501918252600281015495808601968752600382015490606087019182526005600484015493608089019485520193815194858782549182815201915f52875f20905f5b8181106104ce5750505061047f929161045e8760c0930388610631565b60a08a01968752825199888b5251888b0152519189015260e08801906106f5565b965160608701525160808601525160a085015251838503601f190160c0850152805180865294820194908201915f5b8281106104bb5785870386f35b83518752958101959281019284016104ae565b8254845292890192918a01918a01610441565b815162461bcd60e51b8152600481018490526013602482015272496e646578206f7574206f6620626f756e647360681b6044820152606490fd5b5034610062576020366003190112610062576004355f548110156100625761054290610592565b509081549061055360018401610653565b9260028101549060046003820154910154916105808451968796875260a0602088015260a08701906106f5565b93850152606084015260808301520390f35b5f548110156105c9576006905f8052027f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56301905f90565b634e487b7160e01b5f52603260045260245ffd5b90600182811c9216801561060b575b60208310146105f757565b634e487b7160e01b5f52602260045260245ffd5b91607f16916105ec565b60c0810190811067ffffffffffffffff82111761029757604052565b90601f8019910116810190811067ffffffffffffffff82111761029757604052565b9060405191825f8254610665816105dd565b908184526020946001916001811690815f146106d35750600114610695575b50505061069392500383610631565b565b5f90815285812095935091905b8183106106bb57505061069393508201015f8080610684565b855488840185015294850194879450918301916106a2565b9250505061069394925060ff191682840152151560051b8201015f8080610684565b805180835260209291819084018484015e5f828201840152601f01601f1916010190565b818110610724575050565b5f815560010161071956fea2646970667358221220d78fcda814dbfacd7706fd4c8c983bb815111156fcb7b5d4f068c5c2e9dff28064736f6c63430008190033",
+  "deployedBytecode": "0x6040608081526004361015610012575f80fd5b5f3560e01c80634e50c75c1461051b5780635e3879051461038857806379d6f0a2146100665763d931496014610046575f80fd5b34610062575f366003190112610062576020905f549051908152f35b5f80fd5b50346100625760c03660031901126100625760243567ffffffffffffffff8111610062573660238201121561006257806004013567ffffffffffffffff811161029757601f19908351926100c2602084601f8501160185610631565b818452366024838301011161006257815f92602460209301838701378401015260a4359067ffffffffffffffff821161006257366023830112156100625781600401359167ffffffffffffffff8311610297578260051b8551936101296020830186610631565b8452602460208501918301019136831161006257602401905b8282106103785750505083519361015885610615565b60043585526020850193845284016044358152606085019160643583526080860193608435855260a08701525f54600160401b811015610297578060016101a192015f55610592565b9590956103655786518655519081519167ffffffffffffffff8311610297576101cd60018801546105dd565b601f8111610327575b50602091601f84116001146102b657509180600596949260a09896945f926102ab575b50508160011b915f199060031b1c19161760018501555b5160028401555160038301555160048201550191015180519067ffffffffffffffff821161029757600160401b821161029757602090835483855580841061027c575b5001915f5260205f20915f5b82811061026857005b60019060208351930192818601550161025f565b61029190855f5284845f209182019101610719565b5f610253565b634e487b7160e01b5f52604160045260245ffd5b015190505f806101f9565b839291921691600188015f5260205f20925f5b81811061030f575092600192859260a09a989660059a9896106102f7575b505050811b016001850155610210565b01515f1960f88460031b161c191690555f80806102e7565b929360206001819287860151815501950193016102c9565b61035590600189015f5260205f20601f860160051c8101916020871061035b575b601f0160051c0190610719565b5f6101d6565b9091508190610348565b634e487b7160e01b5f525f60045260245ffd5b8135815260209182019101610142565b5034610062576020908160031936011261006257600435606060a083516103ae81610615565b5f815282868201525f858201525f838201525f608082015201525f548110156104e1576103db8391610592565b508251916103e883610615565b815483526001916103fb60018201610653565b90828501918252600281015495808601968752600382015490606087019182526005600484015493608089019485520193815194858782549182815201915f52875f20905f5b8181106104ce5750505061047f929161045e8760c0930388610631565b60a08a01968752825199888b5251888b0152519189015260e08801906106f5565b965160608701525160808601525160a085015251838503601f190160c0850152805180865294820194908201915f5b8281106104bb5785870386f35b83518752958101959281019284016104ae565b8254845292890192918a01918a01610441565b815162461bcd60e51b8152600481018490526013602482015272496e646578206f7574206f6620626f756e647360681b6044820152606490fd5b5034610062576020366003190112610062576004355f548110156100625761054290610592565b509081549061055360018401610653565b9260028101549060046003820154910154916105808451968796875260a0602088015260a08701906106f5565b93850152606084015260808301520390f35b5f548110156105c9576006905f8052027f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56301905f90565b634e487b7160e01b5f52603260045260245ffd5b90600182811c9216801561060b575b60208310146105f757565b634e487b7160e01b5f52602260045260245ffd5b91607f16916105ec565b60c0810190811067ffffffffffffffff82111761029757604052565b90601f8019910116810190811067ffffffffffffffff82111761029757604052565b9060405191825f8254610665816105dd565b908184526020946001916001811690815f146106d35750600114610695575b50505061069392500383610631565b565b5f90815285812095935091905b8183106106bb57505061069393508201015f8080610684565b855488840185015294850194879450918301916106a2565b9250505061069394925060ff191682840152151560051b8201015f8080610684565b805180835260209291819084018484015e5f828201840152601f01601f1916010190565b818110610724575050565b5f815560010161071956fea2646970667358221220d78fcda814dbfacd7706fd4c8c983bb815111156fcb7b5d4f068c5c2e9dff28064736f6c63430008190033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "57:847:1:-:0;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "57:847:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;57:847:1;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;57:847:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;527:61;;57:847;;;527:61;;57:847;;;;;527:61;;57:847;;;;;;527:61;;57:847;;;;;;527:61;;57:847;;;-1:-1:-1;;;57:847:1;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;527:61;;57:847;;;;;;;;;-1:-1:-1;;;57:847:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:847:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;-1:-1:-1;57:847:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;699:27;;57:847;;;767:19;;;;:::i;:::-;57:847;;;;;;;:::i;:::-;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;57:847:1;;;;;;;;;;;;;;;;;;-1:-1:-1;57:847:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;57:847:1;;;;;;;;;;;;;-1:-1:-1;;;57:847:1;;;;;;;;;;;;;;-1:-1:-1;;57:847:1;;;;;;;;264:31;;;;;;;;:::i;:::-;57:847;;;;264:31;;57:847;264:31;;;:::i;:::-;;;;;57:847;264:31;57:847;264:31;;;57:847;264:31;;57:847;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;-1:-1:-1;57:847:1;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;:::o;:::-;-1:-1:-1;57:847:1;;;;;;;;-1:-1:-1;;57:847:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:847:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:847:1;;;;;;;;-1:-1:-1;;57:847:1;;;;:::o;:::-;;;;;;;;:::o;:::-;;;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract AssignmentRegistry {\n    struct Assignment {\n        uint256 id;\n        string task_name;\n        uint256 status;\n        uint256 due;\n        uint256 project;\n        uint256[] assign;\n    }\n\n    Assignment[] public assignments;\n\n    function addAssignment(\n        uint256 _id,\n        string memory _task_name,\n        uint256 _status,\n        uint256 _due,\n        uint256 _project,\n        uint256[] memory _assign\n    ) public {\n        assignments.push(Assignment(_id, _task_name, _status, _due, _project, _assign));\n    }\n\n    function getAssignment(uint256 _index) public view returns (Assignment memory) {\n        require(_index < assignments.length, \"Index out of bounds\");\n        return assignments[_index];\n    }\n\n    function getAssignmentsCount() public view returns (uint256) {\n        return assignments.length;\n    }\n}\n",
+  "sourcePath": "/Users/abhayrathi/Desktop/Developer/capstone_proj/blockchain-node/contracts/TaskList.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/TaskList.sol",
+    "exportedSymbols": {
+      "AssignmentRegistry": [
+        191
+      ]
+    },
+    "id": 192,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 112,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "AssignmentRegistry",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 191,
+        "linearizedBaseContracts": [
+          191
+        ],
+        "name": "AssignmentRegistry",
+        "nameLocation": "66:18:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "AssignmentRegistry.Assignment",
+            "id": 126,
+            "members": [
+              {
+                "constant": false,
+                "id": 114,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "127:2:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 126,
+                "src": "119:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 113,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "119:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 116,
+                "mutability": "mutable",
+                "name": "task_name",
+                "nameLocation": "146:9:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 126,
+                "src": "139:16:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 115,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "139:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 118,
+                "mutability": "mutable",
+                "name": "status",
+                "nameLocation": "173:6:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 126,
+                "src": "165:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 117,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "165:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 120,
+                "mutability": "mutable",
+                "name": "due",
+                "nameLocation": "197:3:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 126,
+                "src": "189:11:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 119,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "189:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 122,
+                "mutability": "mutable",
+                "name": "project",
+                "nameLocation": "218:7:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 126,
+                "src": "210:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 121,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "210:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 125,
+                "mutability": "mutable",
+                "name": "assign",
+                "nameLocation": "245:6:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 126,
+                "src": "235:16:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                  "typeString": "uint256[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 123,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "235:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 124,
+                  "nodeType": "ArrayTypeName",
+                  "src": "235:9:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                    "typeString": "uint256[]"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Assignment",
+            "nameLocation": "98:10:1",
+            "nodeType": "StructDefinition",
+            "scope": 191,
+            "src": "91:167:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "4e50c75c",
+            "id": 130,
+            "mutability": "mutable",
+            "name": "assignments",
+            "nameLocation": "284:11:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 191,
+            "src": "264:31:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Assignment_$126_storage_$dyn_storage",
+              "typeString": "struct AssignmentRegistry.Assignment[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 128,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 127,
+                  "name": "Assignment",
+                  "nameLocations": [
+                    "264:10:1"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 126,
+                  "src": "264:10:1"
+                },
+                "referencedDeclaration": 126,
+                "src": "264:10:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Assignment_$126_storage_ptr",
+                  "typeString": "struct AssignmentRegistry.Assignment"
+                }
+              },
+              "id": 129,
+              "nodeType": "ArrayTypeName",
+              "src": "264:12:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Assignment_$126_storage_$dyn_storage_ptr",
+                "typeString": "struct AssignmentRegistry.Assignment[]"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 159,
+              "nodeType": "Block",
+              "src": "500:96:1",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 150,
+                            "name": "_id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 132,
+                            "src": "538:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "id": 151,
+                            "name": "_task_name",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 134,
+                            "src": "543:10:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          {
+                            "id": 152,
+                            "name": "_status",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 136,
+                            "src": "555:7:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "id": 153,
+                            "name": "_due",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 138,
+                            "src": "564:4:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "id": 154,
+                            "name": "_project",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 140,
+                            "src": "570:8:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "id": 155,
+                            "name": "_assign",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 143,
+                            "src": "580:7:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                              "typeString": "uint256[] memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                              "typeString": "uint256[] memory"
+                            }
+                          ],
+                          "id": 149,
+                          "name": "Assignment",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 126,
+                          "src": "527:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_Assignment_$126_storage_ptr_$",
+                            "typeString": "type(struct AssignmentRegistry.Assignment storage pointer)"
+                          }
+                        },
+                        "id": 156,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "527:61:1",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Assignment_$126_memory_ptr",
+                          "typeString": "struct AssignmentRegistry.Assignment memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Assignment_$126_memory_ptr",
+                          "typeString": "struct AssignmentRegistry.Assignment memory"
+                        }
+                      ],
+                      "expression": {
+                        "id": 146,
+                        "name": "assignments",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 130,
+                        "src": "510:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Assignment_$126_storage_$dyn_storage",
+                          "typeString": "struct AssignmentRegistry.Assignment storage ref[] storage ref"
+                        }
+                      },
+                      "id": 148,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "522:4:1",
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "510:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Assignment_$126_storage_$dyn_storage_ptr_$_t_struct$_Assignment_$126_storage_$returns$__$attached_to$_t_array$_t_struct$_Assignment_$126_storage_$dyn_storage_ptr_$",
+                        "typeString": "function (struct AssignmentRegistry.Assignment storage ref[] storage pointer,struct AssignmentRegistry.Assignment storage ref)"
+                      }
+                    },
+                    "id": 157,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "510:79:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 158,
+                  "nodeType": "ExpressionStatement",
+                  "src": "510:79:1"
+                }
+              ]
+            },
+            "functionSelector": "79d6f0a2",
+            "id": 160,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addAssignment",
+            "nameLocation": "311:13:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 144,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 132,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nameLocation": "342:3:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 160,
+                  "src": "334:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 131,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "334:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 134,
+                  "mutability": "mutable",
+                  "name": "_task_name",
+                  "nameLocation": "369:10:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 160,
+                  "src": "355:24:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 133,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "355:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 136,
+                  "mutability": "mutable",
+                  "name": "_status",
+                  "nameLocation": "397:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 160,
+                  "src": "389:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 135,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "389:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 138,
+                  "mutability": "mutable",
+                  "name": "_due",
+                  "nameLocation": "422:4:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 160,
+                  "src": "414:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 137,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "414:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 140,
+                  "mutability": "mutable",
+                  "name": "_project",
+                  "nameLocation": "444:8:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 160,
+                  "src": "436:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 139,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "436:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 143,
+                  "mutability": "mutable",
+                  "name": "_assign",
+                  "nameLocation": "479:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 160,
+                  "src": "462:24:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 141,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "462:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 142,
+                    "nodeType": "ArrayTypeName",
+                    "src": "462:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "324:168:1"
+            },
+            "returnParameters": {
+              "id": 145,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "500:0:1"
+            },
+            "scope": 191,
+            "src": "302:294:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 180,
+              "nodeType": "Block",
+              "src": "681:112:1",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 172,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "id": 169,
+                          "name": "_index",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 162,
+                          "src": "699:6:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "<",
+                        "rightExpression": {
+                          "expression": {
+                            "id": 170,
+                            "name": "assignments",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 130,
+                            "src": "708:11:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_struct$_Assignment_$126_storage_$dyn_storage",
+                              "typeString": "struct AssignmentRegistry.Assignment storage ref[] storage ref"
+                            }
+                          },
+                          "id": 171,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "720:6:1",
+                          "memberName": "length",
+                          "nodeType": "MemberAccess",
+                          "src": "708:18:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "699:27:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "496e646578206f7574206f6620626f756e6473",
+                        "id": 173,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "728:21:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_dd00b67a545791a54dd99d9c09eb42099756ea4ee2bd47188784c22234589367",
+                          "typeString": "literal_string \"Index out of bounds\""
+                        },
+                        "value": "Index out of bounds"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_dd00b67a545791a54dd99d9c09eb42099756ea4ee2bd47188784c22234589367",
+                          "typeString": "literal_string \"Index out of bounds\""
+                        }
+                      ],
+                      "id": 168,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
+                      "referencedDeclaration": 4294967278,
+                      "src": "691:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 174,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "691:59:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 175,
+                  "nodeType": "ExpressionStatement",
+                  "src": "691:59:1"
+                },
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "id": 176,
+                      "name": "assignments",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 130,
+                      "src": "767:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Assignment_$126_storage_$dyn_storage",
+                        "typeString": "struct AssignmentRegistry.Assignment storage ref[] storage ref"
+                      }
+                    },
+                    "id": 178,
+                    "indexExpression": {
+                      "id": 177,
+                      "name": "_index",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 162,
+                      "src": "779:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "767:19:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Assignment_$126_storage",
+                      "typeString": "struct AssignmentRegistry.Assignment storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 167,
+                  "id": 179,
+                  "nodeType": "Return",
+                  "src": "760:26:1"
+                }
+              ]
+            },
+            "functionSelector": "5e387905",
+            "id": 181,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAssignment",
+            "nameLocation": "611:13:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 163,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 162,
+                  "mutability": "mutable",
+                  "name": "_index",
+                  "nameLocation": "633:6:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 181,
+                  "src": "625:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 161,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "625:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "624:16:1"
+            },
+            "returnParameters": {
+              "id": 167,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 166,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 181,
+                  "src": "662:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Assignment_$126_memory_ptr",
+                    "typeString": "struct AssignmentRegistry.Assignment"
+                  },
+                  "typeName": {
+                    "id": 165,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 164,
+                      "name": "Assignment",
+                      "nameLocations": [
+                        "662:10:1"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 126,
+                      "src": "662:10:1"
+                    },
+                    "referencedDeclaration": 126,
+                    "src": "662:10:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Assignment_$126_storage_ptr",
+                      "typeString": "struct AssignmentRegistry.Assignment"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "661:19:1"
+            },
+            "scope": 191,
+            "src": "602:191:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 189,
+              "nodeType": "Block",
+              "src": "860:42:1",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "id": 186,
+                      "name": "assignments",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 130,
+                      "src": "877:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Assignment_$126_storage_$dyn_storage",
+                        "typeString": "struct AssignmentRegistry.Assignment storage ref[] storage ref"
+                      }
+                    },
+                    "id": 187,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberLocation": "889:6:1",
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "src": "877:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 185,
+                  "id": 188,
+                  "nodeType": "Return",
+                  "src": "870:25:1"
+                }
+              ]
+            },
+            "functionSelector": "d9314960",
+            "id": 190,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAssignmentsCount",
+            "nameLocation": "808:19:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 182,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "827:2:1"
+            },
+            "returnParameters": {
+              "id": 185,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 184,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 190,
+                  "src": "851:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 183,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "851:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "850:9:1"
+            },
+            "scope": 191,
+            "src": "799:103:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 192,
+        "src": "57:847:1",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "32:873:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.25+commit.b61c2a91.Emscripten.clang"
+  },
+  "networks": {
+    "1714986584518": {
+      "events": {},
+      "links": {},
+      "address": "0x07BB68Bd5f0ae54c139708e8b20120504130d8d1",
+      "transactionHash": "0xadf6f3703bbd10ecdbeac0a67efccd5880952f646933d901ad2140915c1fd81f"
+    },
+    "1714993518377": {
+      "events": {},
+      "links": {},
+      "address": "0x1BC95B1aCbd859082fB160D9c02D9c7B406ed03E",
+      "transactionHash": "0xb0024adac753b2f36008d6fbaa0d511db89074a7bf698aadac365af153a9673a"
+    }
+  },
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-05-08T15:06:10.597Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

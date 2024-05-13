@@ -1,0 +1,22 @@
+{
+  "name": "blockchain-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "express": "^4.19.2",
+    "web3": "^4.8.0",
+    "web3-providers-http": "^4.1.0",
+    "web3-utils": "^4.2.3"
+  },
+  "type": "commonjs",
+  "exports": {
+    "./lib/commonjs/eth.exports": "./node_modules/web3/lib/commonjs/eth.exports.js"
+  }
+}

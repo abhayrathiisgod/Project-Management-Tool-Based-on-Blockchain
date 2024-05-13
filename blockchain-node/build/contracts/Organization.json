@@ -1,0 +1,1875 @@
+{
+  "contractName": "Organization",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "socialName",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "email",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "city",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "foundDate",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Organization.OrgData[]",
+          "name": "_orgs",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "socialName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "city",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "foundDate",
+          "type": "uint256"
+        }
+      ],
+      "name": "OrgAdded",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "orgCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "organizations",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "socialName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "city",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "foundDate",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getOrganization",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "socialName",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "email",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "city",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "foundDate",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Organization.OrgData",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "getOrgCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"socialName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"city\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"foundDate\",\"type\":\"uint256\"}],\"internalType\":\"struct Organization.OrgData[]\",\"name\":\"_orgs\",\"type\":\"tuple[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"socialName\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"city\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"foundDate\",\"type\":\"uint256\"}],\"name\":\"OrgAdded\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"getOrgCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"getOrganization\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"socialName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"city\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"foundDate\",\"type\":\"uint256\"}],\"internalType\":\"struct Organization.OrgData\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"orgCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"organizations\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"socialName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"city\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"foundDate\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Teams.sol\":\"Organization\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[],\"viaIR\":true},\"sources\":{\"project:/contracts/Teams.sol\":{\"keccak256\":\"0x8a961a936d9ea89b2bf1163b23a5d6df8ba6f1f97e95ec3ae2f7701d2e4a2620\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://89d9560afe0283fc06ce9c8326379b467a92c7b070dd4547bb7527616e0837e8\",\"dweb:/ipfs/QmSjh8g5jFp1n9Rp76jxUVqrmy3kV1iby22FFvhx3VZybT\"]}},\"version\":1}",
+  "bytecode": "0x608060405234620008975762000e1580380390816200001e81620008b1565b9182396020818381010312620008975780516001600160401b0381116200089757828201601f828401011215620008975781810151926001600160401b03841162000491578360051b91602062000077818501620008b1565b8096815201908285016020858388010101116200089757602081860101915b6020858388010101831062000756576000875b80518210156200074657620000c060015462000953565b9182600155620000d1818362000979565b516000938452602084815260409094208151815593810151805160018601916001600160401b0382116200049157825490600182811c921680156200073b575b60208310146200057b5781601f849311620006e8575b50602090601f83116001146200067d5760009262000671575b50508160011b916000199060031b1c19161790555b6040810151805160028601916001600160401b0382116200049157825490600182811c9216801562000666575b60208310146200057b5781601f84931162000613575b50602090601f8311600114620005a8576000926200059c575b50508160011b916000199060031b1c19161790555b60608101518051906001600160401b03821162000491576003860154908160011c91600181161562000591575b60011660208310146200057b5781601f84931162000529575b50602090601f8311600114620004b357600092620004a7575b50508160011b916000199060031b1c19161760038501555b608081015180519094906001600160401b038111620004915760049081830154600181811c9116801562000486575b60208210146200047157601f811162000426575b506020601f8211600114620003af5781906200039c9798600092620003a3575b50508160011b916000199060031b1c191617908201555b600560a0809301519101557f27802933aca43a9367fb8586039e6123723f4cad07d77bd6d489d6b60fded50a600154916020620002f5858862000979565b51015190604062000307868962000979565b5101516200038d886200037e6060620003218a8462000979565b5101516200036f86620003468c60806200033c828962000979565b5101519662000979565b510151956200036060405199898b9a8b528a0190620009a4565b9088820360208a0152620009a4565b908682036040880152620009a4565b908482036060860152620009a4565b9060808301520390a262000953565b90620000a9565b015190508880620002a0565b82840160005260206000209760005b601f19841681106200040d57509782916200039c9899600194601f19811610620003f3575b505050811b0190820155620002b7565b015160001960f88460031b161c19169055888080620003e3565b828201518a5560019099019860209283019201620003be565b8284016000526020600020601f830160051c81016020841062000469575b601f830160051c820181106200045c57505062000280565b6000815560010162000444565b508062000444565b602283634e487b7160e01b6000525260246000fd5b90607f16906200026c565b634e487b7160e01b600052604160045260246000fd5b01519050868062000225565b91506003870160005260206000209160005b601f198516811062000510575090839291600194601f19811610620004f6575b505050811b0160038501556200023d565b015160001960f88460031b161c19169055868080620004e5565b81830151845560019093019260209283019201620004c5565b909150600387016000526020600020601f840160051c81016020851062000573575b601f830160051c82018110620005665750839291506200020c565b600081556001016200054b565b50806200054b565b634e487b7160e01b600052602260045260246000fd5b91607f1691620001f3565b015190508780620001b1565b6000858152602081209350601f198516905b818110620005fa5750908460019594939210620005e0575b505050811b019055620001c6565b015160001960f88460031b161c19169055878080620005d2565b82840151855560019094019360209384019301620005ba565b909150836000526020600020601f840160051c810191602085106200065b575b601f0160051c01905b8181106200064e578392915062000198565b600081556001016200063c565b909150819062000633565b91607f169162000182565b01519050878062000140565b6000858152602081209350601f198516905b818110620006cf5750908460019594939210620006b5575b505050811b01905562000155565b015160001960f88460031b161c19169055878080620006a7565b828401518555600190940193602093840193016200068f565b909150836000526020600020601f840160051c8101916020851062000730575b601f0160051c01905b81811062000723578392915062000127565b6000815560010162000711565b909150819062000708565b91607f169162000111565b6040516104499081620009cc8239f35b8251906001600160401b038211620008975760c0878401830186890103601f19011262000897576040519160c083016001600160401b038111848210176200089c57604090815288850182016020810151855201516001600160401b0381116200089757620007d2906020888b019184888d01010101620008fc565b6020840152606084890182018101516001600160401b0381116200089757896020620008089285898c85019401010101620008fc565b60408501528885018201608001516001600160401b03811162000897578960206200083d9285898c85019401010101620008fc565b90840152878401810160a00151916001600160401b038311620008975760209360c083620008798c88809881988c8f85019401010101620008fc565b6080840152878c0101015160a0820152815201930192905062000096565b600080fd5b60246000634e487b7160e01b81526041600452fd5b6040519190601f01601f191682016001600160401b038111838210176200049157604052565b60005b838110620008eb5750506000910152565b8181015183820152602001620008da565b81601f82011215620008975780516001600160401b03811162000491576200092e601f8201601f1916602001620008b1565b92818452602082840101116200089757620009509160208085019101620008d7565b90565b6000198114620009635760010190565b634e487b7160e01b600052601160045260246000fd5b80518210156200098e5760209160051b010190565b634e487b7160e01b600052603260045260246000fd5b90602091620009bf81518092818552858086019101620008d7565b601f01601f191601019056fe608060408181526004918236101561001657600080fd5b600090813560e01c90816323d26253146102aa575080634526f69014610124578063d8106690146101015763e792dd8a1461005057600080fd5b346100fe5760203660031901126100fe578190833581528060205220906100f48254926100e661008260018301610338565b956100d861009260028501610338565b9560056100ac6100a460038801610338565b948701610338565b950154966100cb82519a8b9a8b5260c060208c015260c08b01906102c6565b91898303908a01526102c6565b9086820360608801526102c6565b9084820360808601526102c6565b9060a08301520390f35b80fd5b5090346101205781600319360112610120576020906001549051908152f35b5080fd5b50903461012057602092836003193601126102a657815192813561014785610306565b8185528160a060609687898201528787820152878082015287608082015201526001548111158061029d575b1561025a579361023e8461022d61024f956102198a988760c09b60059952808b52209380519a8b9889966101a688610306565b805488526101b660018201610338565b9c88019c8d5260806101ed6101cd60028401610338565b97868b019889528c6101e160038601610338565b9b019a8b528301610338565b9b019a8b5201549a60a08d019b8c5282518e819f9e829f83525191015251918c015260e08b01906102c6565b9051601f1995868b840301908b01526102c6565b9051838883030160808901526102c6565b9151908583030160a08601526102c6565b905160c08301520390f35b835162461bcd60e51b8152808401879052601860248201527f496e76616c6964206f7267616e697a6174696f6e2049442e00000000000000006044820152606490fd5b50801515610173565b8280fd5b9050346101205781600319360112610120576020906001548152f35b919082519283825260005b8481106102f2575050826000602080949584010152601f8019910116010190565b6020818301810151848301820152016102d1565b60c0810190811067ffffffffffffffff82111761032257604052565b634e487b7160e01b600052604160045260246000fd5b9060405191600090805490600182811c91818416938415610409575b60209485851081146103f5578489529081156103d7575060011461039b575b50505050829003601f01601f1916820167ffffffffffffffff81118382101761032257604052565b909293506000528260002091836000935b8385106103c3575050505083010138808080610373565b8054888601830152930192849082016103ac565b60ff191688860152505050151560051b840101905038808080610373565b634e487b7160e01b87526022600452602487fd5b92607f169261035456fea2646970667358221220f13214d052a2ba1b3c4e0cfca7bfce6c4ba001a7160238db2c7ea34e00f3704864736f6c63430008110033",
+  "deployedBytecode": "0x608060408181526004918236101561001657600080fd5b600090813560e01c90816323d26253146102aa575080634526f69014610124578063d8106690146101015763e792dd8a1461005057600080fd5b346100fe5760203660031901126100fe578190833581528060205220906100f48254926100e661008260018301610338565b956100d861009260028501610338565b9560056100ac6100a460038801610338565b948701610338565b950154966100cb82519a8b9a8b5260c060208c015260c08b01906102c6565b91898303908a01526102c6565b9086820360608801526102c6565b9084820360808601526102c6565b9060a08301520390f35b80fd5b5090346101205781600319360112610120576020906001549051908152f35b5080fd5b50903461012057602092836003193601126102a657815192813561014785610306565b8185528160a060609687898201528787820152878082015287608082015201526001548111158061029d575b1561025a579361023e8461022d61024f956102198a988760c09b60059952808b52209380519a8b9889966101a688610306565b805488526101b660018201610338565b9c88019c8d5260806101ed6101cd60028401610338565b97868b019889528c6101e160038601610338565b9b019a8b528301610338565b9b019a8b5201549a60a08d019b8c5282518e819f9e829f83525191015251918c015260e08b01906102c6565b9051601f1995868b840301908b01526102c6565b9051838883030160808901526102c6565b9151908583030160a08601526102c6565b905160c08301520390f35b835162461bcd60e51b8152808401879052601860248201527f496e76616c6964206f7267616e697a6174696f6e2049442e00000000000000006044820152606490fd5b50801515610173565b8280fd5b9050346101205781600319360112610120576020906001548152f35b919082519283825260005b8481106102f2575050826000602080949584010152601f8019910116010190565b6020818301810151848301820152016102d1565b60c0810190811067ffffffffffffffff82111761032257604052565b634e487b7160e01b600052604160045260246000fd5b9060405191600090805490600182811c91818416938415610409575b60209485851081146103f5578489529081156103d7575060011461039b575b50505050829003601f01601f1916820167ffffffffffffffff81118382101761032257604052565b909293506000528260002091836000935b8385106103c3575050505083010138808080610373565b8054888601830152930192849082016103ac565b60ff191688860152505050151560051b840101905038808080610373565b634e487b7160e01b87526022600452602487fd5b92607f169261035456fea2646970667358221220f13214d052a2ba1b3c4e0cfca7bfce6c4ba001a7160238db2c7ea34e00f3704864736f6c63430008110033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "57:988:1:-:0;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;-1:-1:-1;;;;;57:988:1;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;57:988:1;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;505:13:1;538:3;57:988;;520:16;;;;;557:10;57:988;;557:10;:::i;:::-;57:988;;;;607:8;;;;:::i;:::-;;-1:-1:-1;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;57:988:1;;;;;;;;;;;;;;;;;538:3;57:988;;;;;;;;;;;;;538:3;57:988;;;;;;;;;;-1:-1:-1;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;538:3;57:988;;-1:-1:-1;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;634:105;57:988;;653:8;57:988;653:8;;;;:::i;:::-;;:19;;674:8;57:988;674:8;;;;:::i;:::-;;:13;;57:988;689:8;57:988;;689:8;;;;:::i;:::-;;:14;;57:988;705:8;720;705;57:988;705:8;;;;:::i;:::-;;:13;;720:8;;:::i;:::-;;:18;57:988;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;634:105;;;538:3;:::i;:::-;505:13;;;57:988;;;;-1:-1:-1;57:988:1;;;;;;;;-1:-1:-1;57:988:1;;-1:-1:-1;57:988:1;;-1:-1:-1;57:988:1;-1:-1:-1;;57:988:1;;;;;;;;;;538:3;57:988;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:988:1;;-1:-1:-1;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:988:1;;;;;;;;;;;;;;;;;-1:-1:-1;57:988:1;;;-1:-1:-1;57:988:1;;;;;;;;;;;;-1:-1:-1;57:988:1;;;;;-1:-1:-1;57:988:1;;;;;-1:-1:-1;57:988:1;;;;;;;;;;-1:-1:-1;57:988:1;;-1:-1:-1;57:988:1;;-1:-1:-1;57:988:1;-1:-1:-1;;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:988:1;;-1:-1:-1;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:988:1;;;;;;;;;;;;;;;-1:-1:-1;57:988:1;;;;;-1:-1:-1;57:988:1;;;;;;;;;;;;-1:-1:-1;57:988:1;;;;;-1:-1:-1;57:988:1;;;;;;;-1:-1:-1;;;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:988:1;;-1:-1:-1;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:988:1;;;;;;;;;-1:-1:-1;57:988:1;;;;;;;;;;;;;;;-1:-1:-1;57:988:1;;;;;-1:-1:-1;57:988:1;;;;;;;-1:-1:-1;;;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:988:1;;-1:-1:-1;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:988:1;;;;;;;;;-1:-1:-1;57:988:1;;;;;;;;;;;520:16;57:988;;;;;;;;;;;;;-1:-1:-1;;;;;57:988:1;;;;;;;;;;;;;;-1:-1:-1;;57:988:1;;;;;;;;;;-1:-1:-1;;;;;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;57:988:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;-1:-1:-1;;;;;57:988:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;-1:-1:-1;;;;;57:988:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;-1:-1:-1;;;;;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:988:1;;;;-1:-1:-1;57:988:1;;;;;;;;;;;;;;;;-1:-1:-1;;57:988:1;;;-1:-1:-1;;;;;57:988:1;;;;;;;;;;:::o;:::-;;;;;;;;-1:-1:-1;;57:988:1;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;57:988:1;;;;;;;;-1:-1:-1;;57:988:1;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::o;:::-;-1:-1:-1;;57:988:1;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;-1:-1:-1;;57:988:1;;;;:::o",
+  "deployedSourceMap": "57:988:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;57:988:1;;;;;;;;;;;;;;;;;;251:48;57:988;251:48;57:988;251:48;;;:::i;:::-;;57:988;251:48;;;;;:::i;:::-;;;;;57:988;251:48;;;:::i;:::-;;;;;:::i;:::-;;;57:988;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;305:23;57:988;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;855:15;;;:26;;;57:988;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;-1:-1:-1;;;57:988:1;;;;;;;;;;;;;;;;;;;;;855:26;874:7;;;;855:26;;57:988;;;;;;;;;;;;;;;;;;;;1028:8;57:988;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;-1:-1:-1;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;57:988:1;;;;;-1:-1:-1;;57:988:1;;;;;;;;;;;;;;:::o;:::-;;;;;-1:-1:-1;57:988:1;;-1:-1:-1;57:988:1;;;-1:-1:-1;57:988:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;57:988:1;;;;;-1:-1:-1;;;57:988:1;;;;;;;;-1:-1:-1;57:988:1;;;;;;;-1:-1:-1;;;57:988:1;;;;;;;;;;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract Organization {\n    struct OrgData {\n        uint256 id;\n        string socialName;\n        string name;\n        string email;\n        string city;\n        uint256 foundDate;\n    }\n\n    mapping(uint256 => OrgData) public organizations;\n    uint256 public orgCount;\n\n    event OrgAdded(uint256 indexed id, string socialName, string name, string email, string city, uint256 foundDate);\n\n    constructor(OrgData[] memory _orgs) {\n        for (uint256 i = 0; i < _orgs.length; i++) {\n            orgCount++;\n            organizations[orgCount] = _orgs[i];\n            emit OrgAdded(orgCount, _orgs[i].socialName, _orgs[i].name, _orgs[i].email, _orgs[i].city, _orgs[i].foundDate);\n        }\n    }\n\n    function getOrganization(uint256 _id) public view returns (OrgData memory) {\n        require(_id <= orgCount && _id > 0, \"Invalid organization ID.\");\n        return organizations[_id];\n    }\n\n    function getOrgCount() public view returns (uint256) {\n        return orgCount;\n    }\n}\n",
+  "sourcePath": "/Users/abhayrathi/Desktop/Developer/capstone_proj/blockchain-node/contracts/Teams.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Teams.sol",
+    "exportedSymbols": {
+      "Organization": [
+        249
+      ]
+    },
+    "id": 250,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 126,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Organization",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 249,
+        "linearizedBaseContracts": [
+          249
+        ],
+        "name": "Organization",
+        "nameLocation": "66:12:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Organization.OrgData",
+            "id": 139,
+            "members": [
+              {
+                "constant": false,
+                "id": 128,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "118:2:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 139,
+                "src": "110:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 127,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "110:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 130,
+                "mutability": "mutable",
+                "name": "socialName",
+                "nameLocation": "137:10:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 139,
+                "src": "130:17:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 129,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "130:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 132,
+                "mutability": "mutable",
+                "name": "name",
+                "nameLocation": "164:4:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 139,
+                "src": "157:11:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 131,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "157:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 134,
+                "mutability": "mutable",
+                "name": "email",
+                "nameLocation": "185:5:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 139,
+                "src": "178:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 133,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "178:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 136,
+                "mutability": "mutable",
+                "name": "city",
+                "nameLocation": "207:4:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 139,
+                "src": "200:11:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 135,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "200:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 138,
+                "mutability": "mutable",
+                "name": "foundDate",
+                "nameLocation": "229:9:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 139,
+                "src": "221:17:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 137,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "221:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "OrgData",
+            "nameLocation": "92:7:1",
+            "nodeType": "StructDefinition",
+            "scope": 249,
+            "src": "85:160:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "e792dd8a",
+            "id": 144,
+            "mutability": "mutable",
+            "name": "organizations",
+            "nameLocation": "286:13:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 249,
+            "src": "251:48:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_OrgData_$139_storage_$",
+              "typeString": "mapping(uint256 => struct Organization.OrgData)"
+            },
+            "typeName": {
+              "id": 143,
+              "keyType": {
+                "id": 140,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "259:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "251:27:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_OrgData_$139_storage_$",
+                "typeString": "mapping(uint256 => struct Organization.OrgData)"
+              },
+              "valueType": {
+                "id": 142,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 141,
+                  "name": "OrgData",
+                  "nameLocations": [
+                    "270:7:1"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 139,
+                  "src": "270:7:1"
+                },
+                "referencedDeclaration": 139,
+                "src": "270:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_OrgData_$139_storage_ptr",
+                  "typeString": "struct Organization.OrgData"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "d8106690",
+            "id": 146,
+            "mutability": "mutable",
+            "name": "orgCount",
+            "nameLocation": "320:8:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 249,
+            "src": "305:23:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 145,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "305:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "eventSelector": "27802933aca43a9367fb8586039e6123723f4cad07d77bd6d489d6b60fded50a",
+            "id": 160,
+            "name": "OrgAdded",
+            "nameLocation": "341:8:1",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 159,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 148,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "366:2:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 160,
+                  "src": "350:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 147,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "350:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 150,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "socialName",
+                  "nameLocation": "377:10:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 160,
+                  "src": "370:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 149,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "370:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 152,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nameLocation": "396:4:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 160,
+                  "src": "389:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 151,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "389:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 154,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "email",
+                  "nameLocation": "409:5:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 160,
+                  "src": "402:12:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 153,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "402:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 156,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "city",
+                  "nameLocation": "423:4:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 160,
+                  "src": "416:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 155,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "416:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 158,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "foundDate",
+                  "nameLocation": "437:9:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 160,
+                  "src": "429:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 157,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "429:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "349:98:1"
+            },
+            "src": "335:113:1"
+          },
+          {
+            "body": {
+              "id": 215,
+              "nodeType": "Block",
+              "src": "490:266:1",
+              "statements": [
+                {
+                  "body": {
+                    "id": 213,
+                    "nodeType": "Block",
+                    "src": "543:207:1",
+                    "statements": [
+                      {
+                        "expression": {
+                          "id": 179,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "UnaryOperation",
+                          "operator": "++",
+                          "prefix": false,
+                          "src": "557:10:1",
+                          "subExpression": {
+                            "id": 178,
+                            "name": "orgCount",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 146,
+                            "src": "557:8:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 180,
+                        "nodeType": "ExpressionStatement",
+                        "src": "557:10:1"
+                      },
+                      {
+                        "expression": {
+                          "id": 187,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "baseExpression": {
+                              "id": 181,
+                              "name": "organizations",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 144,
+                              "src": "581:13:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_OrgData_$139_storage_$",
+                                "typeString": "mapping(uint256 => struct Organization.OrgData storage ref)"
+                              }
+                            },
+                            "id": 183,
+                            "indexExpression": {
+                              "id": 182,
+                              "name": "orgCount",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 146,
+                              "src": "595:8:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "nodeType": "IndexAccess",
+                            "src": "581:23:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_OrgData_$139_storage",
+                              "typeString": "struct Organization.OrgData storage ref"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "baseExpression": {
+                              "id": 184,
+                              "name": "_orgs",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 164,
+                              "src": "607:5:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_OrgData_$139_memory_ptr_$dyn_memory_ptr",
+                                "typeString": "struct Organization.OrgData memory[] memory"
+                              }
+                            },
+                            "id": 186,
+                            "indexExpression": {
+                              "id": 185,
+                              "name": "i",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 168,
+                              "src": "613:1:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "607:8:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_OrgData_$139_memory_ptr",
+                              "typeString": "struct Organization.OrgData memory"
+                            }
+                          },
+                          "src": "581:34:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_OrgData_$139_storage",
+                            "typeString": "struct Organization.OrgData storage ref"
+                          }
+                        },
+                        "id": 188,
+                        "nodeType": "ExpressionStatement",
+                        "src": "581:34:1"
+                      },
+                      {
+                        "eventCall": {
+                          "arguments": [
+                            {
+                              "id": 190,
+                              "name": "orgCount",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 146,
+                              "src": "643:8:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            {
+                              "expression": {
+                                "baseExpression": {
+                                  "id": 191,
+                                  "name": "_orgs",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 164,
+                                  "src": "653:5:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_array$_t_struct$_OrgData_$139_memory_ptr_$dyn_memory_ptr",
+                                    "typeString": "struct Organization.OrgData memory[] memory"
+                                  }
+                                },
+                                "id": 193,
+                                "indexExpression": {
+                                  "id": 192,
+                                  "name": "i",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 168,
+                                  "src": "659:1:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "nodeType": "IndexAccess",
+                                "src": "653:8:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_struct$_OrgData_$139_memory_ptr",
+                                  "typeString": "struct Organization.OrgData memory"
+                                }
+                              },
+                              "id": 194,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberLocation": "662:10:1",
+                              "memberName": "socialName",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 130,
+                              "src": "653:19:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            },
+                            {
+                              "expression": {
+                                "baseExpression": {
+                                  "id": 195,
+                                  "name": "_orgs",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 164,
+                                  "src": "674:5:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_array$_t_struct$_OrgData_$139_memory_ptr_$dyn_memory_ptr",
+                                    "typeString": "struct Organization.OrgData memory[] memory"
+                                  }
+                                },
+                                "id": 197,
+                                "indexExpression": {
+                                  "id": 196,
+                                  "name": "i",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 168,
+                                  "src": "680:1:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "nodeType": "IndexAccess",
+                                "src": "674:8:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_struct$_OrgData_$139_memory_ptr",
+                                  "typeString": "struct Organization.OrgData memory"
+                                }
+                              },
+                              "id": 198,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberLocation": "683:4:1",
+                              "memberName": "name",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 132,
+                              "src": "674:13:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            },
+                            {
+                              "expression": {
+                                "baseExpression": {
+                                  "id": 199,
+                                  "name": "_orgs",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 164,
+                                  "src": "689:5:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_array$_t_struct$_OrgData_$139_memory_ptr_$dyn_memory_ptr",
+                                    "typeString": "struct Organization.OrgData memory[] memory"
+                                  }
+                                },
+                                "id": 201,
+                                "indexExpression": {
+                                  "id": 200,
+                                  "name": "i",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 168,
+                                  "src": "695:1:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "nodeType": "IndexAccess",
+                                "src": "689:8:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_struct$_OrgData_$139_memory_ptr",
+                                  "typeString": "struct Organization.OrgData memory"
+                                }
+                              },
+                              "id": 202,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberLocation": "698:5:1",
+                              "memberName": "email",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 134,
+                              "src": "689:14:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            },
+                            {
+                              "expression": {
+                                "baseExpression": {
+                                  "id": 203,
+                                  "name": "_orgs",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 164,
+                                  "src": "705:5:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_array$_t_struct$_OrgData_$139_memory_ptr_$dyn_memory_ptr",
+                                    "typeString": "struct Organization.OrgData memory[] memory"
+                                  }
+                                },
+                                "id": 205,
+                                "indexExpression": {
+                                  "id": 204,
+                                  "name": "i",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 168,
+                                  "src": "711:1:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "nodeType": "IndexAccess",
+                                "src": "705:8:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_struct$_OrgData_$139_memory_ptr",
+                                  "typeString": "struct Organization.OrgData memory"
+                                }
+                              },
+                              "id": 206,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberLocation": "714:4:1",
+                              "memberName": "city",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 136,
+                              "src": "705:13:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            },
+                            {
+                              "expression": {
+                                "baseExpression": {
+                                  "id": 207,
+                                  "name": "_orgs",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 164,
+                                  "src": "720:5:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_array$_t_struct$_OrgData_$139_memory_ptr_$dyn_memory_ptr",
+                                    "typeString": "struct Organization.OrgData memory[] memory"
+                                  }
+                                },
+                                "id": 209,
+                                "indexExpression": {
+                                  "id": 208,
+                                  "name": "i",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 168,
+                                  "src": "726:1:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "nodeType": "IndexAccess",
+                                "src": "720:8:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_struct$_OrgData_$139_memory_ptr",
+                                  "typeString": "struct Organization.OrgData memory"
+                                }
+                              },
+                              "id": 210,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberLocation": "729:9:1",
+                              "memberName": "foundDate",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 138,
+                              "src": "720:18:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              },
+                              {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              },
+                              {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              },
+                              {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              },
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "id": 189,
+                            "name": "OrgAdded",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 160,
+                            "src": "634:8:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint256_$returns$__$",
+                              "typeString": "function (uint256,string memory,string memory,string memory,string memory,uint256)"
+                            }
+                          },
+                          "id": 211,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "634:105:1",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 212,
+                        "nodeType": "EmitStatement",
+                        "src": "629:110:1"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 174,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 171,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 168,
+                      "src": "520:1:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "expression": {
+                        "id": 172,
+                        "name": "_orgs",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 164,
+                        "src": "524:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_OrgData_$139_memory_ptr_$dyn_memory_ptr",
+                          "typeString": "struct Organization.OrgData memory[] memory"
+                        }
+                      },
+                      "id": 173,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "530:6:1",
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "src": "524:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "520:16:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 214,
+                  "initializationExpression": {
+                    "assignments": [
+                      168
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 168,
+                        "mutability": "mutable",
+                        "name": "i",
+                        "nameLocation": "513:1:1",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 214,
+                        "src": "505:9:1",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 167,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "505:7:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 170,
+                    "initialValue": {
+                      "hexValue": "30",
+                      "id": 169,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "517:1:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "505:13:1"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "id": 176,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "538:3:1",
+                      "subExpression": {
+                        "id": 175,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 168,
+                        "src": "538:1:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 177,
+                    "nodeType": "ExpressionStatement",
+                    "src": "538:3:1"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "500:250:1"
+                }
+              ]
+            },
+            "id": 216,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 165,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 164,
+                  "mutability": "mutable",
+                  "name": "_orgs",
+                  "nameLocation": "483:5:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 216,
+                  "src": "466:22:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_OrgData_$139_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Organization.OrgData[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 162,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 161,
+                        "name": "OrgData",
+                        "nameLocations": [
+                          "466:7:1"
+                        ],
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 139,
+                        "src": "466:7:1"
+                      },
+                      "referencedDeclaration": 139,
+                      "src": "466:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_OrgData_$139_storage_ptr",
+                        "typeString": "struct Organization.OrgData"
+                      }
+                    },
+                    "id": 163,
+                    "nodeType": "ArrayTypeName",
+                    "src": "466:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_OrgData_$139_storage_$dyn_storage_ptr",
+                      "typeString": "struct Organization.OrgData[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "465:24:1"
+            },
+            "returnParameters": {
+              "id": 166,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "490:0:1"
+            },
+            "scope": 249,
+            "src": "454:302:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 239,
+              "nodeType": "Block",
+              "src": "837:115:1",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 231,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 227,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "id": 225,
+                            "name": "_id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 218,
+                            "src": "855:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "<=",
+                          "rightExpression": {
+                            "id": 226,
+                            "name": "orgCount",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 146,
+                            "src": "862:8:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "855:15:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "&&",
+                        "rightExpression": {
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 230,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "id": 228,
+                            "name": "_id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 218,
+                            "src": "874:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": ">",
+                          "rightExpression": {
+                            "hexValue": "30",
+                            "id": 229,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "880:1:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          },
+                          "src": "874:7:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "src": "855:26:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "496e76616c6964206f7267616e697a6174696f6e2049442e",
+                        "id": 232,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "883:26:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_c0408efb8901be096d569c5cf522cfa391e2c03c2318e88442ef06a7ee33b0e3",
+                          "typeString": "literal_string \"Invalid organization ID.\""
+                        },
+                        "value": "Invalid organization ID."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_c0408efb8901be096d569c5cf522cfa391e2c03c2318e88442ef06a7ee33b0e3",
+                          "typeString": "literal_string \"Invalid organization ID.\""
+                        }
+                      ],
+                      "id": 224,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
+                      "referencedDeclaration": 4294967278,
+                      "src": "847:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 233,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "847:63:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 234,
+                  "nodeType": "ExpressionStatement",
+                  "src": "847:63:1"
+                },
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "id": 235,
+                      "name": "organizations",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 144,
+                      "src": "927:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_OrgData_$139_storage_$",
+                        "typeString": "mapping(uint256 => struct Organization.OrgData storage ref)"
+                      }
+                    },
+                    "id": 237,
+                    "indexExpression": {
+                      "id": 236,
+                      "name": "_id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 218,
+                      "src": "941:3:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "927:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_OrgData_$139_storage",
+                      "typeString": "struct Organization.OrgData storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 223,
+                  "id": 238,
+                  "nodeType": "Return",
+                  "src": "920:25:1"
+                }
+              ]
+            },
+            "functionSelector": "4526f690",
+            "id": 240,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getOrganization",
+            "nameLocation": "771:15:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 219,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 218,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nameLocation": "795:3:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 240,
+                  "src": "787:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 217,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "787:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "786:13:1"
+            },
+            "returnParameters": {
+              "id": 223,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 222,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 240,
+                  "src": "821:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_OrgData_$139_memory_ptr",
+                    "typeString": "struct Organization.OrgData"
+                  },
+                  "typeName": {
+                    "id": 221,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 220,
+                      "name": "OrgData",
+                      "nameLocations": [
+                        "821:7:1"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 139,
+                      "src": "821:7:1"
+                    },
+                    "referencedDeclaration": 139,
+                    "src": "821:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_OrgData_$139_storage_ptr",
+                      "typeString": "struct Organization.OrgData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "820:16:1"
+            },
+            "scope": 249,
+            "src": "762:190:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 247,
+              "nodeType": "Block",
+              "src": "1011:32:1",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 245,
+                    "name": "orgCount",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 146,
+                    "src": "1028:8:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 244,
+                  "id": 246,
+                  "nodeType": "Return",
+                  "src": "1021:15:1"
+                }
+              ]
+            },
+            "functionSelector": "23d26253",
+            "id": 248,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getOrgCount",
+            "nameLocation": "967:11:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 241,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "978:2:1"
+            },
+            "returnParameters": {
+              "id": 244,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 243,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 248,
+                  "src": "1002:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 242,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1002:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1001:9:1"
+            },
+            "scope": 249,
+            "src": "958:85:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 250,
+        "src": "57:988:1",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:1014:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {
+    "1714993518377": {
+      "events": {
+        "0x27802933aca43a9367fb8586039e6123723f4cad07d77bd6d489d6b60fded50a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "socialName",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "email",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "city",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "foundDate",
+              "type": "uint256"
+            }
+          ],
+          "name": "OrgAdded",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xaDdb1dEA8D811dDFD39DbAe46164cBB3943A7621",
+      "transactionHash": "0xabca7ebc46be1e3bf83f2d0f907999d0aaa0d05073774df7dc1ba69891310845"
+    }
+  },
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-05-09T09:56:03.545Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

@@ -1,0 +1,1828 @@
+{
+  "contractName": "UserManager",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "email",
+              "type": "string"
+            }
+          ],
+          "indexed": false,
+          "internalType": "struct UserManager.User",
+          "name": "user",
+          "type": "tuple"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "friends",
+          "type": "uint256[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "img",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "company",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "projects",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "UserProfileAdded",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "profileCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "userProfiles",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "email",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct UserManager.User",
+          "name": "user",
+          "type": "tuple"
+        },
+        {
+          "internalType": "string",
+          "name": "img",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "company",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_email",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_friends",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "string",
+          "name": "_img",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_company",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_projects",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "addUserProfile",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getUserProfile",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "id",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "string",
+                  "name": "email",
+                  "type": "string"
+                }
+              ],
+              "internalType": "struct UserManager.User",
+              "name": "user",
+              "type": "tuple"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "friends",
+              "type": "uint256[]"
+            },
+            {
+              "internalType": "string",
+              "name": "img",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "company",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "projects",
+              "type": "uint256[]"
+            }
+          ],
+          "internalType": "struct UserManager.UserProfile",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"}],\"indexed\":false,\"internalType\":\"struct UserManager.User\",\"name\":\"user\",\"type\":\"tuple\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"friends\",\"type\":\"uint256[]\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"img\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"company\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"projects\",\"type\":\"uint256[]\"}],\"name\":\"UserProfileAdded\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_email\",\"type\":\"string\"},{\"internalType\":\"uint256[]\",\"name\":\"_friends\",\"type\":\"uint256[]\"},{\"internalType\":\"string\",\"name\":\"_img\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"_company\",\"type\":\"uint256\"},{\"internalType\":\"uint256[]\",\"name\":\"_projects\",\"type\":\"uint256[]\"}],\"name\":\"addUserProfile\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"}],\"name\":\"getUserProfile\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"}],\"internalType\":\"struct UserManager.User\",\"name\":\"user\",\"type\":\"tuple\"},{\"internalType\":\"uint256[]\",\"name\":\"friends\",\"type\":\"uint256[]\"},{\"internalType\":\"string\",\"name\":\"img\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"company\",\"type\":\"uint256\"},{\"internalType\":\"uint256[]\",\"name\":\"projects\",\"type\":\"uint256[]\"}],\"internalType\":\"struct UserManager.UserProfile\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"profileCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"userProfiles\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"}],\"internalType\":\"struct UserManager.User\",\"name\":\"user\",\"type\":\"tuple\"},{\"internalType\":\"string\",\"name\":\"img\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"company\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Users.sol\":\"UserManager\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[],\"viaIR\":true},\"sources\":{\"project:/contracts/Users.sol\":{\"keccak256\":\"0x3d617b7bcd0be3b213d260876a3da634b0c971af3025b5bdaf9b49803dcad838\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://353bf9d1ff4fee6f24eb81ec3a5a4afb7045a53ed4ac2964266dfbc976512f98\",\"dweb:/ipfs/QmfQVNhKd9R6yEoPnTyzHeGpj2mDYP8As6QnxCuFwc83ax\"]}},\"version\":1}",
+  "bytecode": "0x6080806040523461001657610abd908161001c8239f35b600080fdfe6080604052600436101561001257600080fd5b60003560e01c806318d4a12d146106fc5780631f52b76c146105635780636da95d981461006b5763ef43acef1461004857600080fd5b34610066576000366003190112610066576020600154604051908152f35b600080fd5b346100665760a0366003190112610066576004356001600160401b0381116100665761009b903690600401610965565b6024356001600160401b038111610066576100ba9036906004016109bb565b906044356001600160401b038111610066576100da903690600401610965565b916084356001600160401b038111610066576100fa9036906004016109bb565b60015493600019851461054d57600185016001556040519361011b856107ca565b600186018552602085015260405194610133866107af565b6001810186526001602087019186835285604089015283606089015260643560808901528460a0890152016000526000602052602060406000209187518355518051600184015501518051906001600160401b03821161039157819061019c6002850154610775565b601f8111610518575b50602090601f83116001146104a65760009261049b575b50508160011b916000199060031b1c19161760028201555b60408601518051906001600160401b03821161039157600160401b821161039157602090600384015483600386015580841061047b575b500160038301600052602060002060005b838110610467575050505060608601518051906001600160401b0382116103915761024a6004840154610775565b601f8111610427575b50602090601f83116001146103b257918060a094926006946000926103a7575b50508160011b916000199060031b1c19161760048201555b60808801516005820155019501518051906001600160401b03821161039157600160401b8211610391576020908754838955808410610374575b50019560005260206000209560005b828110610360577ff7ae78fd78e56b88fece82d648d75e02e3530d0123c41c223380f1d14730a403878761035b886103458961033760015495610329604051988998895260c060208a015260c0890190610911565b908782036040890152610931565b9085820360608701526108d1565b90606435608085015283820360a0850152610931565b0390a1005b60019060208351930192818a0155016102d4565b61038b908960005284846000209182019101610a21565b886102c5565b634e487b7160e01b600052604160045260246000fd5b015190508a80610273565b906004840160005260206000209160005b601f198516811061040f57509260a0949260019260069583601f198116106103f6575b505050811b01600482015561028b565b015160001960f88460031b161c191690558a80806103e6565b919260206001819286850151815501940192016103c3565b61045790600485016000526020600020601f850160051c8101916020861061045d575b601f0160051c0190610a21565b88610253565b909150819061044a565b60019060208451940193818401550161021c565b610495906003860160005284846000209182019101610a21565b8961020b565b0151905088806101bc565b9250600284016000526020600020906000935b601f19841685106104fd576001945083601f198116106104e4575b505050811b0160028201556101d4565b015160001960f88460031b161c191690558880806104d4565b818101518355602094850194600190930192909101906104b9565b61054790600286016000526020600020601f850160051c8101916020861061045d57601f0160051c0190610a21565b896101a5565b634e487b7160e01b600052601160045260246000fd5b346100665760208060031936011261006657604051600435610584826107af565b60008252604051610594816107ca565b6000815260a060609382858781950152868201528260408201528280820152600060808201520152600154811115806106f3575b156106ae57600052600082526106aa6040600020604051926105e9846107af565b815484526105f9600183016108ac565b85850190815261069361060e60038501610a38565b6040870190815261068261062460048701610806565b9185890192835261066e610646600660058a01549960808d019a8b5201610a38565b9560a08b019687526040519b8c9b818d5251908c01525160c060408c015260e08b0190610911565b9051601f1996878b840301908b0152610931565b9051848883030160808901526108d1565b925160a086015251908483030160c0850152610931565b0390f35b60405162461bcd60e51b815260048101849052601860248201527f496e76616c696420757365722070726f66696c652049442e00000000000000006044820152606490fd5b508015156105c8565b346100665760203660031901126100665760043560005260006020526040600020805461072b600183016108ac565b9161076b600561073d60048401610806565b9201549161075d6040519586958652608060208701526080860190610911565b9084820360408601526108d1565b9060608301520390f35b90600182811c921680156107a5575b602083101461078f57565b634e487b7160e01b600052602260045260246000fd5b91607f1691610784565b60c081019081106001600160401b0382111761039157604052565b604081019081106001600160401b0382111761039157604052565b90601f801991011681019081106001600160401b0382111761039157604052565b906040519182600082549261081a84610775565b9081845260019485811690816000146108895750600114610846575b5050610844925003836107e5565b565b9093915060005260209081600020936000915b81831061087157505061084493508201013880610836565b85548884018501529485019487945091830191610859565b91505061084494506020925060ff191682840152151560051b8201013880610836565b906040516108b9816107ca565b60206108cc600183958054855201610806565b910152565b919082519283825260005b8481106108fd575050826000602080949584010152601f8019910116010190565b6020818301810151848301820152016108dc565b906040602061092e938051845201519181602082015201906108d1565b90565b90815180825260208080930193019160005b828110610951575050505090565b835185529381019392810192600101610943565b81601f82011215610066578035906001600160401b0382116103915760405192610999601f8401601f1916602001856107e5565b8284526020838301011161006657816000926020809301838601378301015290565b9080601f83011215610066578135906001600160401b038211610391578160051b604051936020936109ef858401876107e5565b85528380860192820101928311610066578301905b828210610a12575050505090565b81358152908301908301610a04565b818110610a2c575050565b60008155600101610a21565b9060405191828154918282526020928383019160005283600020936000905b828210610a6d57505050610844925003836107e5565b855484526001958601958895509381019390910190610a5756fea264697066735822122002e4a26186a10490b4d612d9e894968a19a9361fb306d3518907a5a176e0aff064736f6c63430008110033",
+  "deployedBytecode": "0x6080604052600436101561001257600080fd5b60003560e01c806318d4a12d146106fc5780631f52b76c146105635780636da95d981461006b5763ef43acef1461004857600080fd5b34610066576000366003190112610066576020600154604051908152f35b600080fd5b346100665760a0366003190112610066576004356001600160401b0381116100665761009b903690600401610965565b6024356001600160401b038111610066576100ba9036906004016109bb565b906044356001600160401b038111610066576100da903690600401610965565b916084356001600160401b038111610066576100fa9036906004016109bb565b60015493600019851461054d57600185016001556040519361011b856107ca565b600186018552602085015260405194610133866107af565b6001810186526001602087019186835285604089015283606089015260643560808901528460a0890152016000526000602052602060406000209187518355518051600184015501518051906001600160401b03821161039157819061019c6002850154610775565b601f8111610518575b50602090601f83116001146104a65760009261049b575b50508160011b916000199060031b1c19161760028201555b60408601518051906001600160401b03821161039157600160401b821161039157602090600384015483600386015580841061047b575b500160038301600052602060002060005b838110610467575050505060608601518051906001600160401b0382116103915761024a6004840154610775565b601f8111610427575b50602090601f83116001146103b257918060a094926006946000926103a7575b50508160011b916000199060031b1c19161760048201555b60808801516005820155019501518051906001600160401b03821161039157600160401b8211610391576020908754838955808410610374575b50019560005260206000209560005b828110610360577ff7ae78fd78e56b88fece82d648d75e02e3530d0123c41c223380f1d14730a403878761035b886103458961033760015495610329604051988998895260c060208a015260c0890190610911565b908782036040890152610931565b9085820360608701526108d1565b90606435608085015283820360a0850152610931565b0390a1005b60019060208351930192818a0155016102d4565b61038b908960005284846000209182019101610a21565b886102c5565b634e487b7160e01b600052604160045260246000fd5b015190508a80610273565b906004840160005260206000209160005b601f198516811061040f57509260a0949260019260069583601f198116106103f6575b505050811b01600482015561028b565b015160001960f88460031b161c191690558a80806103e6565b919260206001819286850151815501940192016103c3565b61045790600485016000526020600020601f850160051c8101916020861061045d575b601f0160051c0190610a21565b88610253565b909150819061044a565b60019060208451940193818401550161021c565b610495906003860160005284846000209182019101610a21565b8961020b565b0151905088806101bc565b9250600284016000526020600020906000935b601f19841685106104fd576001945083601f198116106104e4575b505050811b0160028201556101d4565b015160001960f88460031b161c191690558880806104d4565b818101518355602094850194600190930192909101906104b9565b61054790600286016000526020600020601f850160051c8101916020861061045d57601f0160051c0190610a21565b896101a5565b634e487b7160e01b600052601160045260246000fd5b346100665760208060031936011261006657604051600435610584826107af565b60008252604051610594816107ca565b6000815260a060609382858781950152868201528260408201528280820152600060808201520152600154811115806106f3575b156106ae57600052600082526106aa6040600020604051926105e9846107af565b815484526105f9600183016108ac565b85850190815261069361060e60038501610a38565b6040870190815261068261062460048701610806565b9185890192835261066e610646600660058a01549960808d019a8b5201610a38565b9560a08b019687526040519b8c9b818d5251908c01525160c060408c015260e08b0190610911565b9051601f1996878b840301908b0152610931565b9051848883030160808901526108d1565b925160a086015251908483030160c0850152610931565b0390f35b60405162461bcd60e51b815260048101849052601860248201527f496e76616c696420757365722070726f66696c652049442e00000000000000006044820152606490fd5b508015156105c8565b346100665760203660031901126100665760043560005260006020526040600020805461072b600183016108ac565b9161076b600561073d60048401610806565b9201549161075d6040519586958652608060208701526080860190610911565b9084820360408601526108d1565b9060608301520390f35b90600182811c921680156107a5575b602083101461078f57565b634e487b7160e01b600052602260045260246000fd5b91607f1691610784565b60c081019081106001600160401b0382111761039157604052565b604081019081106001600160401b0382111761039157604052565b90601f801991011681019081106001600160401b0382111761039157604052565b906040519182600082549261081a84610775565b9081845260019485811690816000146108895750600114610846575b5050610844925003836107e5565b565b9093915060005260209081600020936000915b81831061087157505061084493508201013880610836565b85548884018501529485019487945091830191610859565b91505061084494506020925060ff191682840152151560051b8201013880610836565b906040516108b9816107ca565b60206108cc600183958054855201610806565b910152565b919082519283825260005b8481106108fd575050826000602080949584010152601f8019910116010190565b6020818301810151848301820152016108dc565b906040602061092e938051845201519181602082015201906108d1565b90565b90815180825260208080930193019160005b828110610951575050505090565b835185529381019392810192600101610943565b81601f82011215610066578035906001600160401b0382116103915760405192610999601f8401601f1916602001856107e5565b8284526020838301011161006657816000926020809301838601378301015290565b9080601f83011215610066578135906001600160401b038211610391578160051b604051936020936109ef858401876107e5565b85528380860192820101928311610066578301905b828210610a12575050505090565b81358152908301908301610a04565b818110610a2c575050565b60008155600101610a21565b9060405191828154918282526020928383019160005283600020936000905b828210610a6d57505050610844925003836107e5565b855484526001958601958895509381019390910190610a5756fea264697066735822122002e4a26186a10490b4d612d9e894968a19a9361fb306d3518907a5a176e0aff064736f6c63430008110033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "93:1162:1:-:0;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "93:1162:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;93:1162:1;;;;;415:27;93:1162;;;;;;;;;;;;;;;;;-1:-1:-1;;93:1162:1;;;;;;-1:-1:-1;;;;;93:1162:1;;;;;;;;;;;:::i;:::-;;;-1:-1:-1;;;;;93:1162:1;;;;;;;;;;;:::i;:::-;;;;-1:-1:-1;;;;;93:1162:1;;;;;;;;;;;:::i;:::-;;;;-1:-1:-1;;;;;93:1162:1;;;;;;;;;;;:::i;:::-;;;;-1:-1:-1;;93:1162:1;;;;;;;;;;;;;;;:::i;:::-;;;;;;;817:26;;93:1162;;;;;;;:::i;:::-;;;;;;;;882:71;;93:1162;;;;882:71;93:1162;882:71;;93:1162;882:71;93:1162;882:71;;93:1162;;;;882:71;;93:1162;882:71;93:1162;882:71;;93:1162;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;93:1162:1;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;882:71;;93:1162;;;;-1:-1:-1;;;;;93:1162:1;;;;-1:-1:-1;;;93:1162:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;882:71;;;;93:1162;882:71;;93:1162;;;;-1:-1:-1;;;;;93:1162:1;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;882:71;;93:1162;;;;;;882:71;;93:1162;;;;-1:-1:-1;;;;;93:1162:1;;;;-1:-1:-1;;;93:1162:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;968:76;93:1162;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;:::i;:::-;968:76;;;93:1162;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;-1:-1:-1;93:1162:1;;;;;;;;;;;;;;;;;-1:-1:-1;;93:1162:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;-1:-1:-1;93:1162:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;-1:-1:-1;93:1162:1;;;;;;;;;;;;;;;;;;;-1:-1:-1;;93:1162:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1153:19;;;:30;;;93:1162;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;-1:-1:-1;;;93:1162:1;;;;;;;;;;;;;;;;;;;;;1153:30;1176:7;;;;1153:30;;93:1162;;;;;;-1:-1:-1;;93:1162:1;;;;;;;;;;;;;;;;358:51;93:1162;358:51;;;:::i;:::-;;93:1162;358:51;;93:1162;358:51;;;:::i;:::-;;;93:1162;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;93:1162:1;;;;;;;:::o;:::-;;;;;;;-1:-1:-1;;;;;93:1162:1;;;;;;;:::o;:::-;;;;;;;;;;;;;-1:-1:-1;;;;;93:1162:1;;;;;;;:::o;:::-;;;;;;-1:-1:-1;93:1162:1;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;:::o;:::-;;;;;-1:-1:-1;93:1162:1;;;;-1:-1:-1;93:1162:1;;-1:-1:-1;93:1162:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;93:1162:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;:::i;:::-;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;:::o;:::-;;;;;;;;;;;;;;;-1:-1:-1;93:1162:1;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;93:1162:1;;;;;;;;;;;-1:-1:-1;;93:1162:1;;;;;:::i;:::-;;;;;;;;;;;;;-1:-1:-1;93:1162:1;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;-1:-1:-1;;;;;93:1162:1;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;93:1162:1;;-1:-1:-1;93:1162:1;;-1:-1:-1;93:1162:1;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;-1:-1:-1;93:1162:1;;;;;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\n// id , email, company, project id\n\ncontract UserManager {\n    struct User {\n        uint256 id;\n        string email;\n    }\n\n    struct UserProfile {\n        uint256 id;\n        User user;\n        uint256[] friends;\n        string img;\n        uint256 company;\n        uint256[] projects;\n    }\n\n    mapping(uint256 => UserProfile) public userProfiles;\n    uint256 public profileCount;\n\n    event UserProfileAdded(uint256 id, User user, uint256[] friends, string img, uint256 company, uint256[] projects);\n\n    function addUserProfile(\n        string memory _email,\n        uint256[] memory _friends,\n        string memory _img,\n        uint256 _company,\n        uint256[] memory _projects\n    ) public {\n        profileCount++;\n        User memory newUser = User(profileCount, _email);\n        userProfiles[profileCount] = UserProfile(profileCount, newUser, _friends, _img, _company, _projects);\n        emit UserProfileAdded(profileCount, newUser, _friends, _img, _company, _projects);\n    }\n\n    function getUserProfile(uint256 _id) public view returns (UserProfile memory) {\n        require(_id <= profileCount && _id > 0, \"Invalid user profile ID.\");\n        return userProfiles[_id];\n    }\n}",
+  "sourcePath": "/Users/abhayrathi/Desktop/Developer/capstone_proj/blockchain-node/contracts/Users.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Users.sol",
+    "exportedSymbols": {
+      "UserManager": [
+        288
+      ]
+    },
+    "id": 289,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 169,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "UserManager",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 288,
+        "linearizedBaseContracts": [
+          288
+        ],
+        "name": "UserManager",
+        "nameLocation": "102:11:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "UserManager.User",
+            "id": 174,
+            "members": [
+              {
+                "constant": false,
+                "id": 171,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "150:2:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 174,
+                "src": "142:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 170,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "142:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 173,
+                "mutability": "mutable",
+                "name": "email",
+                "nameLocation": "169:5:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 174,
+                "src": "162:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 172,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "162:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "User",
+            "nameLocation": "127:4:1",
+            "nodeType": "StructDefinition",
+            "scope": 288,
+            "src": "120:61:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "UserManager.UserProfile",
+            "id": 190,
+            "members": [
+              {
+                "constant": false,
+                "id": 176,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "224:2:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 190,
+                "src": "216:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 175,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "216:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 179,
+                "mutability": "mutable",
+                "name": "user",
+                "nameLocation": "241:4:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 190,
+                "src": "236:9:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_User_$174_storage_ptr",
+                  "typeString": "struct UserManager.User"
+                },
+                "typeName": {
+                  "id": 178,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 177,
+                    "name": "User",
+                    "nameLocations": [
+                      "236:4:1"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 174,
+                    "src": "236:4:1"
+                  },
+                  "referencedDeclaration": 174,
+                  "src": "236:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_User_$174_storage_ptr",
+                    "typeString": "struct UserManager.User"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 182,
+                "mutability": "mutable",
+                "name": "friends",
+                "nameLocation": "265:7:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 190,
+                "src": "255:17:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                  "typeString": "uint256[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 180,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "255:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 181,
+                  "nodeType": "ArrayTypeName",
+                  "src": "255:9:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                    "typeString": "uint256[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 184,
+                "mutability": "mutable",
+                "name": "img",
+                "nameLocation": "289:3:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 190,
+                "src": "282:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 183,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "282:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 186,
+                "mutability": "mutable",
+                "name": "company",
+                "nameLocation": "310:7:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 190,
+                "src": "302:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 185,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "302:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 189,
+                "mutability": "mutable",
+                "name": "projects",
+                "nameLocation": "337:8:1",
+                "nodeType": "VariableDeclaration",
+                "scope": 190,
+                "src": "327:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                  "typeString": "uint256[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 187,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "327:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 188,
+                  "nodeType": "ArrayTypeName",
+                  "src": "327:9:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                    "typeString": "uint256[]"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "UserProfile",
+            "nameLocation": "194:11:1",
+            "nodeType": "StructDefinition",
+            "scope": 288,
+            "src": "187:165:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "18d4a12d",
+            "id": 195,
+            "mutability": "mutable",
+            "name": "userProfiles",
+            "nameLocation": "397:12:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 288,
+            "src": "358:51:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_UserProfile_$190_storage_$",
+              "typeString": "mapping(uint256 => struct UserManager.UserProfile)"
+            },
+            "typeName": {
+              "id": 194,
+              "keyType": {
+                "id": 191,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "366:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "358:31:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_UserProfile_$190_storage_$",
+                "typeString": "mapping(uint256 => struct UserManager.UserProfile)"
+              },
+              "valueType": {
+                "id": 193,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 192,
+                  "name": "UserProfile",
+                  "nameLocations": [
+                    "377:11:1"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 190,
+                  "src": "377:11:1"
+                },
+                "referencedDeclaration": 190,
+                "src": "377:11:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_UserProfile_$190_storage_ptr",
+                  "typeString": "struct UserManager.UserProfile"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "ef43acef",
+            "id": 197,
+            "mutability": "mutable",
+            "name": "profileCount",
+            "nameLocation": "430:12:1",
+            "nodeType": "VariableDeclaration",
+            "scope": 288,
+            "src": "415:27:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 196,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "415:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "eventSelector": "f7ae78fd78e56b88fece82d648d75e02e3530d0123c41c223380f1d14730a403",
+            "id": 214,
+            "name": "UserProfileAdded",
+            "nameLocation": "455:16:1",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 213,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 199,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "480:2:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "472:10:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 198,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "472:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 202,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nameLocation": "489:4:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "484:9:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_User_$174_memory_ptr",
+                    "typeString": "struct UserManager.User"
+                  },
+                  "typeName": {
+                    "id": 201,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 200,
+                      "name": "User",
+                      "nameLocations": [
+                        "484:4:1"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 174,
+                      "src": "484:4:1"
+                    },
+                    "referencedDeclaration": 174,
+                    "src": "484:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_User_$174_storage_ptr",
+                      "typeString": "struct UserManager.User"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 205,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "friends",
+                  "nameLocation": "505:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "495:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 203,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "495:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 204,
+                    "nodeType": "ArrayTypeName",
+                    "src": "495:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 207,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "img",
+                  "nameLocation": "521:3:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "514:10:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 206,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "514:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 209,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "company",
+                  "nameLocation": "534:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "526:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 208,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "526:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 212,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "projects",
+                  "nameLocation": "553:8:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 214,
+                  "src": "543:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 210,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "543:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 211,
+                    "nodeType": "ArrayTypeName",
+                    "src": "543:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "471:91:1"
+            },
+            "src": "449:114:1"
+          },
+          {
+            "body": {
+              "id": 262,
+              "nodeType": "Block",
+              "src": "761:290:1",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 230,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "771:14:1",
+                    "subExpression": {
+                      "id": 229,
+                      "name": "profileCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 197,
+                      "src": "771:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 231,
+                  "nodeType": "ExpressionStatement",
+                  "src": "771:14:1"
+                },
+                {
+                  "assignments": [
+                    234
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 234,
+                      "mutability": "mutable",
+                      "name": "newUser",
+                      "nameLocation": "807:7:1",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 262,
+                      "src": "795:19:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_User_$174_memory_ptr",
+                        "typeString": "struct UserManager.User"
+                      },
+                      "typeName": {
+                        "id": 233,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 232,
+                          "name": "User",
+                          "nameLocations": [
+                            "795:4:1"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 174,
+                          "src": "795:4:1"
+                        },
+                        "referencedDeclaration": 174,
+                        "src": "795:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_User_$174_storage_ptr",
+                          "typeString": "struct UserManager.User"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 239,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 236,
+                        "name": "profileCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 197,
+                        "src": "822:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 237,
+                        "name": "_email",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 216,
+                        "src": "836:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 235,
+                      "name": "User",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 174,
+                      "src": "817:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_User_$174_storage_ptr_$",
+                        "typeString": "type(struct UserManager.User storage pointer)"
+                      }
+                    },
+                    "id": 238,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "817:26:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_User_$174_memory_ptr",
+                      "typeString": "struct UserManager.User memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "795:48:1"
+                },
+                {
+                  "expression": {
+                    "id": 251,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 240,
+                        "name": "userProfiles",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 195,
+                        "src": "853:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_UserProfile_$190_storage_$",
+                          "typeString": "mapping(uint256 => struct UserManager.UserProfile storage ref)"
+                        }
+                      },
+                      "id": 242,
+                      "indexExpression": {
+                        "id": 241,
+                        "name": "profileCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 197,
+                        "src": "866:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "853:26:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_UserProfile_$190_storage",
+                        "typeString": "struct UserManager.UserProfile storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 244,
+                          "name": "profileCount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 197,
+                          "src": "894:12:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "id": 245,
+                          "name": "newUser",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 234,
+                          "src": "908:7:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_User_$174_memory_ptr",
+                            "typeString": "struct UserManager.User memory"
+                          }
+                        },
+                        {
+                          "id": 246,
+                          "name": "_friends",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 219,
+                          "src": "917:8:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                            "typeString": "uint256[] memory"
+                          }
+                        },
+                        {
+                          "id": 247,
+                          "name": "_img",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 221,
+                          "src": "927:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "id": 248,
+                          "name": "_company",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 223,
+                          "src": "933:8:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "id": 249,
+                          "name": "_projects",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 226,
+                          "src": "943:9:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                            "typeString": "uint256[] memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_struct$_User_$174_memory_ptr",
+                            "typeString": "struct UserManager.User memory"
+                          },
+                          {
+                            "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                            "typeString": "uint256[] memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                            "typeString": "uint256[] memory"
+                          }
+                        ],
+                        "id": 243,
+                        "name": "UserProfile",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 190,
+                        "src": "882:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_UserProfile_$190_storage_ptr_$",
+                          "typeString": "type(struct UserManager.UserProfile storage pointer)"
+                        }
+                      },
+                      "id": 250,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "882:71:1",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_UserProfile_$190_memory_ptr",
+                        "typeString": "struct UserManager.UserProfile memory"
+                      }
+                    },
+                    "src": "853:100:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_UserProfile_$190_storage",
+                      "typeString": "struct UserManager.UserProfile storage ref"
+                    }
+                  },
+                  "id": 252,
+                  "nodeType": "ExpressionStatement",
+                  "src": "853:100:1"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 254,
+                        "name": "profileCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 197,
+                        "src": "985:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 255,
+                        "name": "newUser",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 234,
+                        "src": "999:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_User_$174_memory_ptr",
+                          "typeString": "struct UserManager.User memory"
+                        }
+                      },
+                      {
+                        "id": 256,
+                        "name": "_friends",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 219,
+                        "src": "1008:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        }
+                      },
+                      {
+                        "id": 257,
+                        "name": "_img",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 221,
+                        "src": "1018:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "id": 258,
+                        "name": "_company",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 223,
+                        "src": "1024:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 259,
+                        "name": "_projects",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 226,
+                        "src": "1034:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_struct$_User_$174_memory_ptr",
+                          "typeString": "struct UserManager.User memory"
+                        },
+                        {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        }
+                      ],
+                      "id": 253,
+                      "name": "UserProfileAdded",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 214,
+                      "src": "968:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_struct$_User_$174_memory_ptr_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_string_memory_ptr_$_t_uint256_$_t_array$_t_uint256_$dyn_memory_ptr_$returns$__$",
+                        "typeString": "function (uint256,struct UserManager.User memory,uint256[] memory,string memory,uint256,uint256[] memory)"
+                      }
+                    },
+                    "id": 260,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "968:76:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 261,
+                  "nodeType": "EmitStatement",
+                  "src": "963:81:1"
+                }
+              ]
+            },
+            "functionSelector": "6da95d98",
+            "id": 263,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addUserProfile",
+            "nameLocation": "578:14:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 227,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 216,
+                  "mutability": "mutable",
+                  "name": "_email",
+                  "nameLocation": "616:6:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 263,
+                  "src": "602:20:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 215,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "602:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 219,
+                  "mutability": "mutable",
+                  "name": "_friends",
+                  "nameLocation": "649:8:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 263,
+                  "src": "632:25:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 217,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "632:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 218,
+                    "nodeType": "ArrayTypeName",
+                    "src": "632:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 221,
+                  "mutability": "mutable",
+                  "name": "_img",
+                  "nameLocation": "681:4:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 263,
+                  "src": "667:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 220,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "667:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 223,
+                  "mutability": "mutable",
+                  "name": "_company",
+                  "nameLocation": "703:8:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 263,
+                  "src": "695:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 222,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "695:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 226,
+                  "mutability": "mutable",
+                  "name": "_projects",
+                  "nameLocation": "738:9:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 263,
+                  "src": "721:26:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 224,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "721:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 225,
+                    "nodeType": "ArrayTypeName",
+                    "src": "721:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "592:161:1"
+            },
+            "returnParameters": {
+              "id": 228,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "761:0:1"
+            },
+            "scope": 288,
+            "src": "569:482:1",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 286,
+              "nodeType": "Block",
+              "src": "1135:118:1",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 278,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 274,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "id": 272,
+                            "name": "_id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 265,
+                            "src": "1153:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "<=",
+                          "rightExpression": {
+                            "id": 273,
+                            "name": "profileCount",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 197,
+                            "src": "1160:12:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "1153:19:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "&&",
+                        "rightExpression": {
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 277,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "id": 275,
+                            "name": "_id",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 265,
+                            "src": "1176:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": ">",
+                          "rightExpression": {
+                            "hexValue": "30",
+                            "id": 276,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "1182:1:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          },
+                          "src": "1176:7:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "src": "1153:30:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "496e76616c696420757365722070726f66696c652049442e",
+                        "id": 279,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1185:26:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_c96c8918f82f72ddc5f81639538505b483f1566180ca5d71ed07cb4d5749bf24",
+                          "typeString": "literal_string \"Invalid user profile ID.\""
+                        },
+                        "value": "Invalid user profile ID."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_c96c8918f82f72ddc5f81639538505b483f1566180ca5d71ed07cb4d5749bf24",
+                          "typeString": "literal_string \"Invalid user profile ID.\""
+                        }
+                      ],
+                      "id": 271,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
+                      "referencedDeclaration": 4294967278,
+                      "src": "1145:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 280,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1145:67:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 281,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1145:67:1"
+                },
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "id": 282,
+                      "name": "userProfiles",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 195,
+                      "src": "1229:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_UserProfile_$190_storage_$",
+                        "typeString": "mapping(uint256 => struct UserManager.UserProfile storage ref)"
+                      }
+                    },
+                    "id": 284,
+                    "indexExpression": {
+                      "id": 283,
+                      "name": "_id",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 265,
+                      "src": "1242:3:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1229:17:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_UserProfile_$190_storage",
+                      "typeString": "struct UserManager.UserProfile storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 270,
+                  "id": 285,
+                  "nodeType": "Return",
+                  "src": "1222:24:1"
+                }
+              ]
+            },
+            "functionSelector": "1f52b76c",
+            "id": 287,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUserProfile",
+            "nameLocation": "1066:14:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 266,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 265,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nameLocation": "1089:3:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 287,
+                  "src": "1081:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 264,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1081:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1080:13:1"
+            },
+            "returnParameters": {
+              "id": 270,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 269,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 287,
+                  "src": "1115:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_UserProfile_$190_memory_ptr",
+                    "typeString": "struct UserManager.UserProfile"
+                  },
+                  "typeName": {
+                    "id": 268,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 267,
+                      "name": "UserProfile",
+                      "nameLocations": [
+                        "1115:11:1"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 190,
+                      "src": "1115:11:1"
+                    },
+                    "referencedDeclaration": 190,
+                    "src": "1115:11:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_UserProfile_$190_storage_ptr",
+                      "typeString": "struct UserManager.UserProfile"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1114:20:1"
+            },
+            "scope": 288,
+            "src": "1057:196:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 289,
+        "src": "93:1162:1",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:1223:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {
+    "1714993518377": {
+      "events": {},
+      "links": {},
+      "address": "0x3FeC37F41863eD57d16e7F44DA13Ba811daB4D58",
+      "transactionHash": "0xbafbad1daf1782cc4fd7bffb53cede23847679309c316fe117d4159c59eb27dc"
+    }
+  },
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-05-09T09:56:03.544Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
